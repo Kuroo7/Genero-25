@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap");
+* {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #001f3f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem; /* Reduced from 1rem 2rem */
+  z-index: 1000;
+  transition: all 0.7s ease;
+  font-size: 17px;
+}
+
+.navbar.hide {
+  transform: translateY(-70%);
+  opacity: 0;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+.nav-links {
+  display: none;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.get-ticket {
+  background: linear-gradient(to right, #ffd700, #ff9900);
+  color: black;
+  /* font-weight: 700; */
+  padding: 0.4rem 0.9rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.get-ticket:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+.floating-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.floating-logo {
+  height: 40px;
+  width: auto;
+  pointer-events: auto;
+}
+
+.hamburger {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.floating-bar.scrolled {
+  opacity: 1;
+  transition: opacity 1s ease 0.1s, transform 1s ease 0.1s;
+}
+
+/* For mobile view only — add media query if needed */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background-color: #001f3f;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+.hoverText {
+  transition:
+    0.35s font-weight,
+    0.35s color,
+    0.25s ease-out;
+}
+
+.hoverText:hover {
+  font-weight: 900;
+  color: rgb(238, 242, 255);
+  font-size: 20px;
+}
+
+/* To the right */
+.hoverText:hover + .hoverText {
+  font-weight: 500;
+  color: rgb(199, 210, 254);
+  font-size: 19px;
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+  font-weight: 300;
+  font-size: 17px;
+}
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+  font-weight: 500;
+  color: rgb(199, 210, 254);
+  font-size: 19px;
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  font-weight: 300;
+  font-size: 17px;
+}
