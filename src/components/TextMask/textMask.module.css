@@ -1,0 +1,31 @@
+.main{
+  z-index: 1;
+}
+  
+  .container{
+    position: relative;
+    height: 200vh;
+    /* width: 100vw; */
+    background-color: black;
+  }
+  
+  .stickyMask{
+    display: flex;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    mask-image: url('/media/mask1.svg');
+    mask-position: 63% 37%;
+    mask-repeat: no-repeat;
+    mask-size: 80%;
+  }
+  
+  .stickyMask video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
