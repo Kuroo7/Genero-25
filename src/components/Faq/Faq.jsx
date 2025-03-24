@@ -47,6 +47,15 @@ const FAQItem = ({ faq, isOpen, onClick }) => {
   }, [isOpen]);
 
   return (
+    // {faqs.map((faq, index) => (
+    //   <FAQItem
+    //     key={index}
+    //     faq={faq}
+    //     isOpen={openIndex === index}
+    //     onClick={() => handleClick(index)}
+    //   />
+    // ))}
+    
     <div className="relative w-full">
       <div
         onClick={onClick}
@@ -75,6 +84,7 @@ const FAQItem = ({ faq, isOpen, onClick }) => {
           {faq.answer}
         </div>
       </div>
+      
     </div>
   );
 };

@@ -1,26 +1,49 @@
-<<<<<<< Updated upstream
-import About from "@/components/About";
+"use client"
 import Faq from "@/components/Faq/Faq";
-=======
 import About from "@/components/About/About";
-import Faq from "@/components/Faq";
->>>>>>> Stashed changes
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/Hero";
+// import LinkButton from "@/components/LinkButton/LinkButton";
 import PastEvents from "@/components/PastEvents";
 import PastGenero from "@/components/PastGenero";
+import TextMask from "@/components/TextMask/TextMask";
 import Ticket from "@/components/Ticket";
+import Lenis from 'lenis';
+import { useEffect, useRef } from "react";
+import { useScroll } from "framer-motion"
 
 export default function Home() {
+  useEffect( () => {
+
+    const lenis = new Lenis()
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+
+  }, [])
+  const container = useRef();
+
+const { scrollYProgress } = useScroll({
+
+  target: container,
+
+  offset: ["start start", "end end"]
+
+}) 
   return (
     <div>
-      <Hero/>
-      <About/>
+      <div ref={container} className="  relative h-[200vh]">
+
+      <Hero scrollYProgress={scrollYProgress} />
+      <About scrollYProgress={scrollYProgress}/>
+      </div>
       <PastGenero/>
       <PastEvents/>
+      <TextMask/>
       <Faq/>
       <Ticket/>
-      <Footer/>
+      
     </div>
   );
 }

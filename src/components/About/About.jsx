@@ -9,7 +9,7 @@ const About = () => {
   const size = isHovered ? 200 : 40; // Adjust size as needed
 
   return (
-    <div id="about" className="relative min-h-screen flex flex-col justify-center">
+    <div id="about" className="relative bg-amber-200 min-h-screen flex flex-col justify-center">
       {/* Mask Effect */}
       <motion.div
         className="absolute inset-0 bg-yellow-400"
