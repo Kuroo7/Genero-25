@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 import About from "@/components/About";
 import Faq from "@/components/Faq/Faq";
+=======
+import About from "@/components/About/About";
+import Faq from "@/components/Faq";
+>>>>>>> Stashed changes
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import PastEvents from "@/components/PastEvents";
