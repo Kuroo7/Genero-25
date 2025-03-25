@@ -7,7 +7,7 @@ import useMousePosition from './useMousePosition';
 export default function AboutSection() {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
-  const size = isHovered ? 400 : 40;
+  const size = isHovered ? 200 : 40;
 
   return (
     <BackgroundBeamsWithCollision>
