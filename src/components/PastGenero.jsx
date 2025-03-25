@@ -1,5 +1,12 @@
 "use client";
-import { motion, useTransform, useScroll, useMotionValueEvent } from "framer-motion";
+
+import {
+  motion,
+  useTransform,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
+import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 const PastGenero = () => {
@@ -8,7 +15,7 @@ const PastGenero = () => {
       <div className="flex h-40 pt-10 items-center justify-center">
         <h1 className="md:text-9xl uppercase font-bold text-amber-400">
           Past Genero
-          </h1>
+        </h1>
       </div>
       <HorizontalScrollCarousel />
     </div>
@@ -19,21 +26,23 @@ const HorizontalScrollCarousel = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-85%"]);
-
-  // State to track when scrolling ends
   const [isEnd, setIsEnd] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest >= 1) setIsEnd(true);
-    else setIsEnd(false);
+    setIsEnd(latest >= 1);
   });
 
   return (
-    <section ref={targetRef} className="relative  h-[300vh] bg-neutral-900">
+    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card, index) => (
-            <Card card={card} key={card.id} isLast={index === cards.length - 1} isEnd={isEnd} />
+            <Card
+              card={card}
+              key={card.id}
+              isLast={index === cards.length - 1}
+              isEnd={isEnd}
+            />
           ))}
         </motion.div>
       </div>
@@ -47,19 +56,16 @@ const Card = ({ card, isLast, isEnd }) => {
 
   useEffect(() => {
     const updateScaleFactor = () => {
-      if (window.innerWidth < 640){
+      if (window.innerWidth < 640) {
         setScaleFactor(2); // Small screens
-        setTx("0%")
-      } 
-      else if (window.innerWidth < 1024){
-        setScaleFactor(2.5);
-        setTx("100%")
-        // Tablets
-      } 
-      else {
-        setTx("100%")
-        setScaleFactor(5);
-       } // Large screens
+        setTx("0%");
+      } else if (window.innerWidth < 1024) {
+        setScaleFactor(2.5); // Tablets
+        setTx("100%");
+      } else {
+        setScaleFactor(5); // Large screens
+        setTx("100%");
+      }
     };
 
     updateScaleFactor();
@@ -69,26 +75,27 @@ const Card = ({ card, isLast, isEnd }) => {
 
   return (
     <motion.div
-      key={card.id}
-      className={  `group relative h-[350px] w-[350px] sm:h-[400px] sm:w-[400px] md:h-[450px] md:w-[450px] overflow-hidden bg-neutral-200`}
-      animate={isLast && isEnd ? { scale: scaleFactor,x:tx } : { scale: 1 }}
+      className="group relative   h-[350px] w-[350px] sm:h-[400px] sm:w-[400px] md:h-[450px] md:w-[450px]  overflow-hidden bg-amber-100 border-4 border-amber-200 shadow-lg"
+      animate={isLast && isEnd ? { scale: scaleFactor, x: tx } : { scale: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <div
-        style={{
-          backgroundImage: `url(${card.url})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
-      <div className="absolute inset-0 z-0 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-4 text-3xl sm:text-4xl md:text-6xl font-black uppercase text-white backdrop-blur-lg">
+      {/* Image Container */}
+      <div className="relative h-[80%] w-full">
+        <Image
+          src={card.url}
+          alt={card.title}
+          fill
+          className="object-cover sepia"
+          sizes="(max-width: 768px) 100vw, 350px"
+          quality={85}
+        />
+      </div>
+      {/* Text Container */}
+      <div className="h-[20%] flex items-center justify-center bg-amber-50 p-2">
+        <p className="text-xl sm:text-2xl md:text-3xl font-serif text-green-700 text-center">
           {card.title}
         </p>
       </div>
-
-     
     </motion.div>
   );
 };
@@ -96,11 +103,11 @@ const Card = ({ card, isLast, isEnd }) => {
 export default PastGenero;
 
 const cards = [
-  { url: "/imgs/abstract/1.jpg", title: "Title 1", id: 1 },
-  { url: "/imgs/abstract/2.jpg", title: "Title 2", id: 2 },
-  { url: "/imgs/abstract/3.jpg", title: "Title 3", id: 3 },
-  { url: "/imgs/abstract/4.jpg", title: "Title 4", id: 4 },
-  { url: "/imgs/abstract/5.jpg", title: "Title 5", id: 5 },
-  { url: "/imgs/abstract/6.jpg", title: "Title 6", id: 6 },
-  { url: "/imgs/abstract/7.jpg", title: "Title 7", id: 7 },
+  { url: "/image1.jpg", title: "Genero'01", id: 1 },
+  { url: "/image2.jpg", title: "Genero'09", id: 2 },
+  { url: "/image3.jpg", title: "Genero'13", id: 3 },
+  { url: "/image4.jpg", title: "Genero'16", id: 4 },
+  { url: "/image5.jpg", title: "Genero'20", id: 5 },
+  { url: "/image6.jpg", title: "Genero'23", id: 6 },
+  { url: "/image7.jpg", title: "Genero'25", id: 7 },
 ];

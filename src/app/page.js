@@ -36,6 +36,7 @@ export default function Home() {
       </div>
       <PastGenero />
       <PastEvents />
+
       <TextMask />
       <Faq />
       <Ticket />
