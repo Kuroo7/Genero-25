@@ -10,8 +10,8 @@ export default function AboutSection() {
   const size = isHovered ? 200 : 40;
 
   return (
-    <BackgroundBeamsWithCollision>
-    <section className={styles.aboutSection}>
+    // <BackgroundBeamsWithCollision>
+    <section className={styles.aboutSection+" bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800"}>
       <motion.div 
         className={styles.mask}
         animate={{
@@ -65,6 +65,6 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-    </BackgroundBeamsWithCollision>
   )
+  {/* </BackgroundBeamsWithCollision> */}
 }
