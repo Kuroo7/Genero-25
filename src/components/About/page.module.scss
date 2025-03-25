@@ -1,0 +1,61 @@
+.aboutSection {
+    height: 100vh;
+    position: relative;
+    padding: 2rem;
+    width: 100%;
+    // background-color: black;
+  
+    .mask, .body {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      cursor: default;
+      
+      p {
+        max-width: 1000px;
+        padding: 20px;
+      }
+      
+      span {
+        color: #ec4e39;
+      }
+    }
+  
+    .mask {
+      mask-image: url('../../../public/mask.svg');
+      mask-repeat: no-repeat;
+      mask-size: 40px;
+      background:#fd9a00;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: black;
+    }
+  
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+  
+    .stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      margin-left: 30px;
+  
+      div {
+        h3 {
+          font-weight: bold;
+        }
+      }
+    }
+  }

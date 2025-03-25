@@ -1,6 +1,6 @@
 "use client";
-import Faq from "@/components/Faq/Faq";
 import About from "@/components/About/About";
+import Faq from "@/components/Faq/Faq";
 import Hero from "@/components/Hero/Hero";
 // import LinkButton from "@/components/LinkButton/LinkButton";
 import PastEvents from "@/components/PastEvents";
@@ -8,9 +8,9 @@ import PastEvents from "@/components/PastEvents";
 import PastGenero from "@/components/PastGenero";
 import TextMask from "@/components/TextMask/TextMask";
 import Ticket from "@/components/Ticket";
+import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
-import { useScroll } from "framer-motion";
 
 export default function Home() {
   useEffect(() => {
