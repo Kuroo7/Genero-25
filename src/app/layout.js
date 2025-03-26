@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 // import { Tabs } from "@/components/Tabs";
 
 import Footer from "@/components/Footer/Footer";
+import CustomCursor from '@/components/CustomCursor';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}
       >
         <Navbar/>
+        <CustomCursor/> 
         {/* <Tabs/> */}
         {children}
         <Footer />

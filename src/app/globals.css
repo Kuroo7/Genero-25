@@ -1,3 +1,6 @@
+* {
+  cursor: none !important;
+}
 @import "tailwindcss";
 
 
@@ -42,4 +45,70 @@ body {
  /* overflow-x: hidden; */
  width: 100vw;
 }
+
+:root {
+  --background: #0e1116;
+  --white: #ffffff;
+  --accent: #1bf8c7;
+  --gray: #818a91;
+  --green: #1bf8c7;
+  --font-primary: "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--white);
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#root {
+  cursor: none;
+}
+
+
+.custom-cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 1.5px solid var(--color-amber-400);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.cursor-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trail-segment {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(
+    circle,
+    rgba(133, 120, 46, 0.5) 0%,
+    rgba(244, 212, 33, 0) 80%
+  );
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+}
+
+/* Display Section Styling */
+
+
 
