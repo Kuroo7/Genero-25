@@ -1,25 +1,22 @@
 .aboutSection {
     height: 100vh;
     position: relative;
-    padding: 2rem;
     width: 100%;
-    // background-color: black;
+    background-color: black;
+    overflow: hidden;
   
     .mask, .body {
       width: 100%;
       height: 100%;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       color: white;
       font-size: 1.2rem;
       line-height: 1.6;
       cursor: default;
       
       p {
-        max-width: 1000px;
-        padding: 20px;
+        max-width: 600px;
+        padding: 20px 0;
       }
       
       span {
@@ -27,22 +24,55 @@
       }
     }
   
+    .maskContent, .bodyContent {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      box-sizing: border-box;
+      position: relative;
+    }
+  
+    .textContent {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 2rem;
+      z-index: 2;
+    }
+  
+    .imageContainer {
+      flex: 1;
+      position: relative;
+      height: 100%;
+      min-height: 300px;
+      z-index: 1;
+    }
+  
+    .image {
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+    }
+  
     .mask {
       mask-image: url('../../../public/mask.svg');
       mask-repeat: no-repeat;
       mask-size: 40px;
-      background:#fd9a00;
+      background: #fd9a00;
       position: absolute;
       top: 0;
       left: 0;
       color: black;
+      z-index: 10; // Ensure mask stays on top
     }
   
     h1 {
-      text-align: center;
       font-size: 3rem;
       font-weight: bold;
       margin-bottom: 1.5rem;
+      text-align: left;
     }
   
     .stats {
@@ -50,12 +80,36 @@
       gap: 2.5rem;
       margin-top: 2rem;
       font-size: 1.5rem;
-      margin-left: 30px;
+      margin-left: 0;
   
       div {
         h3 {
           font-weight: bold;
         }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .maskContent, .bodyContent {
+        flex-direction: column;
+      }
+  
+      .textContent {
+        padding-right: 0;
+        padding-bottom: 2rem;
+      }
+  
+      .imageContainer {
+        min-height: 200px;
+      }
+  
+      h1 {
+        font-size: 2rem;
+      }
+  
+      .stats {
+        flex-direction: column;
+        gap: 1rem;
       }
     }
   }
