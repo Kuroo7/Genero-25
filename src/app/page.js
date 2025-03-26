@@ -2,8 +2,8 @@
 import About from "@/components/About/About";
 import Faq from "@/components/Faq/Faq";
 import Hero from "@/components/Hero/Hero";
-import PastEvents from "@/components/PastEvents";
 // import LinkButton from "@/components/LinkButton/LinkButton";
+import PastEvents from "@/components/PastEvents/PastEvents";
 
 import PastGenero from "@/components/PastGenero";
 import TextMask from "@/components/TextMask/TextMask";
@@ -44,6 +44,7 @@ export default function Home() {
       <TextMask />
       <Faq />
       <Ticket />
+      
     </div>
   );
 }

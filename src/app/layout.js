@@ -3,7 +3,7 @@ import "./globals.css";
 // import Navbar from "@/components/Navbar";
 import { Tabs } from "@/components/Tabs";
 
-import Footer1 from "@/components/Footer/Footer1";
+import Footer from "@/components/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,9 +27,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}
       >
         {/* <Navbar/> */}
-        <Tabs/>
+        <Tabs />
         {children}
-        <Footer1/>
+        <Footer />
       </body>
     </html>
   );
