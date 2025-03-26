@@ -7,7 +7,7 @@ import PastEvents from "@/components/PastEvents";
 
 import PastGenero from "@/components/PastGenero";
 import TextMask from "@/components/TextMask/TextMask";
-import Ticket from "@/components/Ticket";
+import Ticket from "@/components/Ticket/Ticket";
 import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";

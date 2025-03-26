@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import Navbar from "@/components/Navbar";
-import { Tabs } from "@/components/Tabs";
+import Navbar from "@/components/Navbar/Navbar";
+// import { Tabs } from "@/components/Tabs";
 
 import Footer1 from "@/components/Footer/Footer1";
 
@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}
       >
-        {/* <Navbar/> */}
-        <Tabs/>
+        <Navbar/>
+        {/* <Tabs/> */}
         {children}
         <Footer1/>
       </body>
