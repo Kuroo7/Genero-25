@@ -6,7 +6,8 @@
     position: relative;
     height: 200vh;
     /* width: 100vw; */
-    background-color: black;
+    /* background-color: rgba(199, 53, 210, 0.999); */
+    background: linear-gradient(135deg, #1a001a, #4b0082, #8a2be2);
   }
   
   .stickyMask{

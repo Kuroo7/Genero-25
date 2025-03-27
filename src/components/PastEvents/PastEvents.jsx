@@ -6,20 +6,34 @@ import Lenis from "lenis";
 import { useTransform, useScroll, motion } from "framer-motion";
 
 const images = [
-  "/image1.jpg",
-  "/image2.jpg",
-  "/image3.jpg",
-  "/image4.jpg",
-  "/image5.jpg",
-  "/image6.jpg",
-  "/image7.jpg",
-  "/image1.jpg",
-  "/image2.jpg",
-  "/image3.jpg",
-  "/image4.jpg",
-  "/image5.jpg",
-  "/image6.jpg",
-  "/image7.jpg",
+  "/pastEvents/img1.jpeg",
+  "/pastEvents/img2.jpeg",
+  "/pastEvents/img3.jpeg",
+  "/pastEvents/img4.jpeg",
+  "/pastEvents/img5.jpeg",
+  "/pastEvents/img6.jpeg",
+  "/pastEvents/img7.jpeg",
+  "/pastEvents/img1.jpeg",
+  "/pastEvents/img2.jpeg",
+  "/pastEvents/img3.jpeg",
+  "/pastEvents/img4.jpeg",
+  "/pastEvents/img5.jpeg",
+  "/pastEvents/img6.jpeg",
+  "/pastEvents/img7.jpeg"
+  
+  // "/image2.jpg",
+  // "/image3.jpg",
+  // "/image4.jpg",
+  // "/image5.jpg",
+  // "/image6.jpg",
+  // "/image7.jpg",
+  // "/image1.jpg",
+  // "/image2.jpg",
+  // "/image3.jpg",
+  // "/image4.jpg",
+  // "/image5.jpg",
+  // "/image6.jpg",
+  // "/image7.jpg",
 ];
 
 export default function PastEvents() {
@@ -61,7 +75,13 @@ export default function PastEvents() {
     <main className={styles.main}>
       <div className={styles.spacer}>
         <div className="flex h-40 pt-10 items-center justify-center">
-          <h1 className="md:text-9xl uppercase font-bold text-amber-400">
+          <h1 className="md:text-9xl uppercase font-bold "
+          style={{
+            background: "linear-gradient(90deg, white 0%, #ffbf00 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+          >
             Past Events
           </h1>
         </div>

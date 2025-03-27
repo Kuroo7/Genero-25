@@ -21,9 +21,7 @@
           position: relative;
           border-radius: 1vw;
           overflow: hidden;
-          img{
-              object-fit: cover;
-          }
+          
       }
       &:nth-of-type(1){
           top: -45%;
@@ -38,6 +36,9 @@
           top: -75%;
       }
   }
+}
+.imageContainer img{
+    object-fit: cover;
 }
 .spacer{
   height: 30vh;

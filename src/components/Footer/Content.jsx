@@ -157,7 +157,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold text-neon-cyan uppercase tracking-wider animate-pulse">
               Connect
             </h3>
-            <div className="flex gap-6">
+            {/* <div className="flex gap-6">
               {socialLinks.map((link, index) => (
                 <motion.div
                   key={index}
@@ -184,7 +184,7 @@ const Footer = () => {
                   </a>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div

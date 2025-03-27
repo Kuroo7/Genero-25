@@ -9,7 +9,7 @@ export default function TextMask() {
   const particleContainer = useRef(null);
 
   const initialMaskSize = 0.8;
-  const targetMaskSize = 85;
+  const targetMaskSize = 145;
 
   useEffect(() => {
     requestAnimationFrame(animate);
@@ -47,7 +47,7 @@ export default function TextMask() {
       <div ref={container} className={styles.container}>
         <div ref={stickyMask} className={styles.stickyMask}>
           <video autoPlay muted loop>
-            <source src="/media/nature.mp4" type="video/mp4" />
+            <source src="/media/genero25.webm" type="video/mp4" />
           </video>
         </div>
         <div ref={particleContainer} className={styles.particleContainer}></div>
