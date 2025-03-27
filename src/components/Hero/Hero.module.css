@@ -9,13 +9,17 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
-
 
 .body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .textContainer {
@@ -77,3 +81,14 @@
 .textContainer:hover .secondary {
     opacity: 1;
 }
+
+/* 
+.aboutText {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    align-items: center;
+    z-index: 2;
+  }
+   */

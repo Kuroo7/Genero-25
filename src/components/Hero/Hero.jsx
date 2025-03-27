@@ -1,27 +1,25 @@
-"use client"
+"use client";
 import { motion, useTransform } from "framer-motion";
-import styles from './Hero.module.css'
+import styles from "./Hero.module.css";
 import { useRef } from "react";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
 // const Scene = dynamic(() => import("@/components/Clock3d/Scene"), { ssr: false });
 
 const Hero = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 0]);
 
   const plane = useRef(null);
 
   return (
-    <div
-      className="h-[150vh] sticky top-0 flex items-center justify-center"
-    >
+    <div className="h-[140vh] sticky top-0 flex items-center justify-center">
       <div>
         <div className={`${styles.container}`}>
           <motion.div
             ref={plane}
             style={{ scale, rotate }}
-            className={"pt-1 " + styles.body}
+            className={"pt-3 " + styles.body}
           >
             <Text3d primary={"GENERO'25"} secondary={"GENERO'25"} />
             <Text3d primary={"THE"} secondary={"THE"} />
@@ -29,9 +27,7 @@ const Hero = ({ scrollYProgress }) => {
             <Text3d primary={"LEGACY"} secondary={"LEGACY"} />
           </motion.div>
 
-          <div className="md:block w-full h-full">
-            {/* <Scene /> */}
-          </div>
+          <div className="md:block w-full h-full">{/* <Scene /> */}</div>
         </div>
       </div>
     </div>

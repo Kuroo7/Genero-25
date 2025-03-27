@@ -1,15 +1,17 @@
 .aboutSection {
-  height: 110vh;
+  height: 105vh;
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: black;
+  margin-top: 100px;
+
 
   .body{
-    background-image: url("/book1.jpg");
-    background-size: contain;
-    background-position: center;
+    background: black;
+    background-image: url("/PurpleBg1.png");
+    background-position: top center;
     background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .mask, .body {
@@ -57,23 +59,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 1;
   }
 
-  // .imageContainer {
-  //   position: relative;
-  //   width: 100%;
-  //   max-width: 800px;
-  //   height: 300px;
-  //   margin-top: 0rem;
-  //   z-index: 1;
+  .imageContainer {
+    // position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    // margin-top: 0rem;
+    // z-index: 1;
+  }
+
+  // .image {
+  //   object-fit: cover;
+  //   object-position: center;
+  //   border-radius: 8px;
   // }
-
-  .image {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 8px;
-  }
 
   .mask {
     mask-image: url('../../../public/mask.svg');
@@ -83,7 +85,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: black;
+    // color: black;
     z-index: 10;
   }
 
@@ -92,6 +94,8 @@
     font-weight: bold;
     margin-bottom: 1.5rem;
     text-align: center;
+    margin-top: 10px;
+    // padding-top: 10px;
   }
 
   .stats {

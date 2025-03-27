@@ -63,7 +63,7 @@ export default function Navbar() {
               animate={{ y: 0 }}
               exit={{ y: -100 }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="w-full backdrop-blur-lg bg-[#190D2B] border-b border-yellow-400/10"
+              className="w-full bg-transparent backdrop-blur-md border-b border-yellow-400/10"
             >
               <div className="max-w-7xl mx-auto px-4">
                 <div className="flex items-center justify-evenly h-16 w-full pl-20">

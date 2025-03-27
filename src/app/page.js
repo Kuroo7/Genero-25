@@ -13,8 +13,6 @@ import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
 
-
-
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -33,24 +31,26 @@ export default function Home() {
   });
   return (
     <div>
-      <div ref={container} className="  relative h-[200vh]"       
-      style={{
-        backgroundImage: "url('/hero-bg.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}>
-      <Hero scrollYProgress={scrollYProgress} />
-      <About scrollYProgress={scrollYProgress}/>
+      <div
+        ref={container}
+        className="  relative h-[160vh]"
+        style={{
+          backgroundImage: "url('/hero-bg.jpg')",
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Hero scrollYProgress={scrollYProgress} />
+        <About scrollYProgress={scrollYProgress} />
       </div>
-      <ZoomParallax/>
+      <ZoomParallax />
       {/* <PastGenero /> */}
       <PastEvents />
 
       <TextMask />
       <Faq />
       <Ticket />
-      
     </div>
   );
 }
