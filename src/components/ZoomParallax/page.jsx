@@ -57,7 +57,7 @@ export default function ZoomParallax() {
 
     return (
         <div className='bg-purple-300'>
-            <div className="flex h-40 pt-10 items-center justify-center">
+            <div className="flex h-40 pt-120 items-center justify-center">
           <h1 className="md:text-9xl uppercase font-bold text-white ">
             Past Genero
           </h1>

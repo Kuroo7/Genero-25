@@ -15,8 +15,6 @@ import { useEffect, useRef } from "react";
 
 
 
-
-
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -35,7 +33,13 @@ export default function Home() {
   });
   return (
     <div>
-      <div ref={container} className="  relative h-[200vh]">
+      <div ref={container} className="  relative h-[200vh]"       
+      style={{
+        backgroundImage: "url('/hero-bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}>
       <Hero scrollYProgress={scrollYProgress} />
       <About scrollYProgress={scrollYProgress}/>
       </div>
