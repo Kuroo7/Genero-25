@@ -34,12 +34,6 @@ export default function Home() {
       <div
         ref={container}
         className="  relative h-[160vh]"
-        style={{
-          backgroundImage: "url('/hero-bg.jpg')",
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
       >
         <Hero scrollYProgress={scrollYProgress} />
         <About scrollYProgress={scrollYProgress} />
