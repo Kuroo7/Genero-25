@@ -106,7 +106,7 @@ const Faq = () => {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen w-screen flex flex-col items-center shadow-lg">
+    <div className="bg-black min-h-screen w-screen flex flex-col justify-center items-center shadow-lg">
       <div className="w-full max-w-4xl px-4 sm:px-6 md:px-8 mt-10">
         <h2 className="text-4xl font-extrabold text-center mb-8 text-white">
           Frequently Asked Questions

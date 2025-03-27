@@ -8,6 +8,7 @@ import PastEvents from "@/components/PastEvents/PastEvents";
 import PastGenero from "@/components/PastGenero";
 import TextMask from "@/components/TextMask/TextMask";
 import Ticket from "@/components/Ticket/Ticket";
+import ZoomParallax from "@/components/ZoomParallax/page";
 import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
@@ -38,7 +39,8 @@ export default function Home() {
       <Hero scrollYProgress={scrollYProgress} />
       <About scrollYProgress={scrollYProgress}/>
       </div>
-      <PastGenero />
+      <ZoomParallax/>
+      {/* <PastGenero /> */}
       <PastEvents />
 
       <TextMask />
