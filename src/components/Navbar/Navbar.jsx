@@ -44,7 +44,7 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="absolute left-4 top-4 z-50"
+          className="absolute left-4 top-3 z-50"
         >
           <a href="/">
             <img

@@ -11,8 +11,8 @@ import { useRef, useState, useEffect } from "react";
 
 const PastGenero = () => {
   return (
-    <div className="bg-neutral-900 mt-10 ">
-      <div className="flex h-40 pt-10 items-center justify-center">
+    <div className="bg-neutral-900 mt-9 ">
+      <div className="flex h-40 pt-10 items-center justify-center mt-9">
         <h1 className="md:text-9xl uppercase font-bold text-amber-400">
           Past Genero
         </h1>

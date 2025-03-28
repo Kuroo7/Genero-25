@@ -13,7 +13,7 @@ const Hero = ({ scrollYProgress }) => {
   const plane = useRef(null);
 
   return (
-    <div className="h-[140vh] sticky top-0 flex items-center justify-center bg-[url('/hero-bg.jpg')] bg-contain bg-center">
+    <div className="h-[140vh] sticky top-0 flex items-center justify-center bg-[url('/hero-bg.jpg')] bg-contain bg-center bg-no-repeat">
 
       <div>
         <div className={`${styles.container}`}>
