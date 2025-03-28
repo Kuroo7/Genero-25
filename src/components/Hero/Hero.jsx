@@ -7,20 +7,20 @@ import dynamic from "next/dynamic";
 // const Scene = dynamic(() => import("@/components/Clock3d/Scene"), { ssr: false });
 
 const Hero = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.1]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 0]);
 
   const plane = useRef(null);
 
   return (
-    <div className="h-[140vh] sticky top-0 flex items-center justify-center bg-[url('/hero-bg.jpg')] bg-contain bg-center bg-no-repeat">
-
+    <div
+    className={`${styles.hero} hero h-[150vh] sticky top-0 flex items-center justify-center bg-[url('/hero-bg.jpg')] bg-cover bg-no-repeat bg-center bg-top`}>
       <div>
         <div className={`${styles.container}`}>
           <motion.div
             ref={plane}
             style={{ scale, rotate }}
-            className={"pt-3 " + styles.body}
+            className={"pt-2 " + styles.body}
           >
             <Text3d primary={"GENERO'25"} secondary={"GENERO'25"} />
             <Text3d primary={"THE"} secondary={"THE"} />
