@@ -3,7 +3,9 @@
 }
 @import "tailwindcss";
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 
 
@@ -38,7 +40,7 @@
 }
 
 body {
-  background: var(--background);
+  background: black;
   color: var(--foreground);
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: 'CustomFont', sans-serif;
@@ -58,10 +60,10 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--background);
+  background-color: black;
   color: var(--white);
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 

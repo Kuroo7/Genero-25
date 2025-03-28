@@ -7,31 +7,32 @@ import dynamic from "next/dynamic";
 // const Scene = dynamic(() => import("@/components/Clock3d/Scene"), { ssr: false });
 
 const Hero = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   const plane = useRef(null);
 
   return (
-    <div className="h-[140vh] sticky top-0 flex items-center justify-center bg-[url('/hero-bg.jpg')] bg-contain bg-center">
+    <motion.div
+   
+    style={{ scale, rotate }}
+   
+     className="h-screen  sticky top-0 flex items-center justify-center bg-[url('/hero-bg.jpg')] bg-cover bg-center">
 
       <div>
         <div className={`${styles.container}`}>
           <motion.div
-            ref={plane}
-            style={{ scale, rotate }}
-            className={"pt-3 " + styles.body}
+           ref={plane}
+            className={"pt-32 " + styles.body}
           >
             <Text3d primary={"GENERO'25"} secondary={"GENERO'25"} />
             <Text3d primary={"THE"} secondary={"THE"} />
             <Text3d primary={"Sacred"} secondary={"Sacred"} />
             <Text3d primary={"LEGACY"} secondary={"LEGACY"} />
           </motion.div>
-
-          <div className="md:block w-full h-full">{/* <Scene /> */}</div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

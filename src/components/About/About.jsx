@@ -16,12 +16,11 @@ export default function AboutSection() {
   const size = hoverState.text ? 250 : 50
 
   return (
-    <section className={`${styles.aboutSection} relative overflow-hidden`}>
-      {/* Particle effect background */}
-      <div className={styles.particles} />
+    <section id='about' className={`${styles.aboutSection} relative overflow-hidden`}>
+    
 
       <motion.div
-        className={styles.mask}
+        className={`${styles.mask}`}
         animate={{
           WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
           WebkitMaskSize: `${size}px`,
@@ -62,22 +61,7 @@ export default function AboutSection() {
         </div>
       </motion.div>
 
-      {/* Magical Floating Elements */}
-      <motion.div 
-        className="absolute inset-0 pointer-events-none"
-        animate={{
-          opacity: [0.3, 0.7, 0.3],
-          y: [10, -10, 10]
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <div className="absolute top-10 left-20 w-6 h-6 bg-yellow-300 rounded-full blur-lg"></div>
-        <div className="absolute bottom-10 right-32 w-8 h-8 bg-orange-400 rounded-full blur-lg"></div>
-      </motion.div>
+
 
       <div className={styles.body}>
         <div className={styles.bodyContent}>
@@ -100,7 +84,7 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageContainer+" hidden md:block "}>
             <Image 
               src="/book2.png" 
               alt="Genero Fest" 

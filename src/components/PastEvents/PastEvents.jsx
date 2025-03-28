@@ -75,7 +75,7 @@ export default function PastEvents() {
     <main className={styles.main}>
       <div className={styles.spacer}>
         <div className="flex h-40 pt-10 items-center justify-center">
-          <h1 className="md:text-9xl uppercase font-bold "
+          <h1 className="md:text-9xl uppercase text-5xl font-bold "
           style={{
             background: "linear-gradient(90deg, white 0%, #ffbf00 100%)",
             WebkitBackgroundClip: "text",

@@ -53,7 +53,11 @@
     line-height: 8vw;
     font-weight: 700;
     margin: 0px;
-    background: linear-gradient(90deg, white 0%, #ffbf00 100%);
+    background: radial-gradient(circle, #9c9c9c, #290b45);
+
+
+
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.4s;

@@ -33,13 +33,12 @@ export default function Home() {
     <div>
       <div
         ref={container}
-        className="  relative h-[160vh]"
+        className="  relative h-[200vh]"
       >
         <Hero scrollYProgress={scrollYProgress} />
         <About scrollYProgress={scrollYProgress} />
       </div>
       <ZoomParallax />
-      {/* <PastGenero /> */}
       <PastEvents />
 
       <TextMask />
