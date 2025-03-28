@@ -64,18 +64,18 @@
 
   .imageContainer {
     // position: relative;
-    width: 100%;
+    width: 100vw;
     max-width: 800px;
     height: 300px;
     // margin-top: 0rem;
     // z-index: 1;
   }
 
-  // .image {
-  //   object-fit: cover;
-  //   object-position: center;
-  //   border-radius: 8px;
-  // }
+  .image {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+  }
 
   .mask {
     mask-image: url('../../../public/mask.svg');
