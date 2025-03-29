@@ -29,10 +29,10 @@ import { FiMousePointer } from "react-icons/fi";
         "/imgs/active/16.jpg",
       ]}
       >
-      <section className="grid h-screen w-screen  place-content-center -z-10 bg-amber-400">
+      <section className="grid h-screen w-screen  place-content-center -z-10 bg-[radial-gradient(circle,_rgba(128,0,128,0.8)_20%,_rgba(0,0,0,1)_80%)] ">
         <p className="flex items-center gap-2 text-3xl font-bold uppercase text-black">
           <FiMousePointer />
-          <span>Hover me</span>
+          <span>Hover me to see glimpses</span>
         </p>
       </section>
     </MouseImageTrail>

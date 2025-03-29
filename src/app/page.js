@@ -1,5 +1,6 @@
 "use client";
 import About from "@/components/About/About";
+import Break from "@/components/Break";
 import Faq from "@/components/Faq/Faq";
 import Hero from "@/components/Hero/Hero";
 // import LinkButton from "@/components/LinkButton/LinkButton";
@@ -36,7 +37,8 @@ export default function Home() {
       >
         <Hero scrollYProgress={scrollYProgress} />
         <About scrollYProgress={scrollYProgress} />
-      </div>
+      </div>  
+      {/* <Break/> */}
       <ZoomParallax />
       <PastEvents />      
       <TextMask />
