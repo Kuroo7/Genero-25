@@ -7,7 +7,7 @@ export default function ScratchText() {
   return (
     <div className="min-h-screen relative flex flex-col items-center justify-center p-4">
       {/* Background Image */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      <div className="absolute inset-0 -z-10">
         <Image
           src="/ticket2.png" 
           alt="Background"
