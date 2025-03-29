@@ -4,9 +4,9 @@ import EventCard from "@/components/Events/EventCard.jsx";
 
 export default function EventsPage() {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">Events</h1>
-      <ul className="grid grid-cols-2 gap-4">
+    <div className="p-6 md:py-20">
+      <h1 className="text-5xl text-center font-bold mb-4">Events</h1>
+      <div className="max-w-[80vw] min-h[70vh] m-auto flex justify-around p-2.5 flex-wrap">
         {eventsData.map((category) => (
             <EventCard
               key={category.id}
@@ -16,7 +16,7 @@ export default function EventsPage() {
               redirectLink={category.id}
             />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
