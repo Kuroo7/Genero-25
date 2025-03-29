@@ -34,7 +34,7 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   return (
-    <header className="  fixed w-full z-50 font-semibold">
+    <header className=" hidden lg:block  fixed w-full z-50 font-semibold">
       <div className="relative">
         {/* Logo */}
         <motion.div
@@ -58,7 +58,7 @@ export default function Navbar() {
             
               exit={{ y: -100 }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className=" hidden lg:block w-full bg-transparent backdrop-blur-md border-b border-yellow-400/10"
+              className="w-full bg-transparent backdrop-blur-md border-b border-yellow-400/10"
             >
               <div className="max-w-7xl mx-auto px-4">
                 <div className="flex items-center justify-evenly h-16 w-full pl-20">
@@ -97,12 +97,6 @@ export default function Navbar() {
                   })}
                 </div>
               </div>
-            </motion.nav>
-            
-            <motion.nav
-            className="lg:hidden block"
-            >
-              Hii
             </motion.nav>
             </>
 

@@ -4,7 +4,7 @@ import { ScratchToReveal } from "./ScratchToReveal";
 
 export default function TicketSection() {
   return (
-    <div className="min-h-screen bg-black text-gold-100 overflow-hidden">
+    <div id="ticket" className="min-h-screen bg-black text-gold-100 overflow-hidden">
       {/* Sacred Legacy Background Elements */}
       <div className="fixed inset-0 -z-10 opacity-20">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/sacred-pattern.png')] bg-repeat opacity-30" />

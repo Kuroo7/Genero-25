@@ -130,11 +130,11 @@
         background-size: contain;
     }
     .container{
-        padding-top: 70px;
+        margin-bottom: 30vh;
     }
     .textContainer p{
-        font-size: 5vw;
-        line-height: 5vw;
+        font-size: 15vw;
+        line-height: 12vw;
     }
 }
   

@@ -37,7 +37,7 @@ const Hero = ({ scrollYProgress }) => {
 function Text3d({ primary, secondary }) {
   return (
     <div className={styles.textContainer}>
-      <p className={styles.primary+ " sm:text-9xl "}>{primary}</p>
+      <p className={styles.primary+ "text-9xl"}>{primary}</p>
       <p className={styles.secondary}>{secondary}</p>
     </div>
   );

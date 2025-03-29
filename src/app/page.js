@@ -45,7 +45,7 @@ export default function Home() {
       <TextMask />
       <Faq />
       <ScratchTicket/>
-      <Ticket />
+      {/* <Ticket /> */}
     </div>
   );
 }
