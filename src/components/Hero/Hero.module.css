@@ -53,11 +53,8 @@
     line-height: 8vw;
     font-weight: 700;
     margin: 0px;
-    background: radial-gradient(circle, #9c9c9c, #290b45);
-
-
-
-
+    background: radial-gradient(circle, #ffc9ba, #3f0572);
+    filter: drop-shadow(2px 2px 1px #0000000d) drop-shadow(-2px -2px 1px #0000004c) drop-shadow(2px 2px 1px #000000a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.4s;
