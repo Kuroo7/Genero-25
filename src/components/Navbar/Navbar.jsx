@@ -7,11 +7,11 @@ import Link from "next/link";
 
 const navItems = [
   { name: "HOME", href: "/", icon: BookOpen },
-  { name: "ABOUT", href: "#about", icon: Swords },
-  { name: "PAST", href: "#past", icon: Shield },
-  { name: "THIS YEAR", href: "#thisyear", icon: Sparkles },
+  { name: "ABOUT", href: "/#about", icon: Swords },
+  { name: "PAST", href: "/#past", icon: Shield },
+  { name: "THIS YEAR", href: "/#thisyear", icon: Sparkles },
   { name: "EVENTS", href: "/events", icon: BookMarked },
-  { name: "FAQ", href: "#faq", icon: BookMarked },
+  { name: "FAQ", href: "/#faq", icon: BookMarked },
   { name: "SCHEDULE", href: "#", icon: BookMarked },
   { name: "TEAM", href: "/team", icon: BookMarked },
   { name: "GET TICKET", href: "#ticket", icon: BookMarked },
@@ -34,7 +34,7 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   return (
-    <header className="fixed w-full z-50 font-semibold">
+    <header className="  fixed w-full z-50 font-semibold">
       <div className="relative">
         {/* Logo */}
         <motion.div
@@ -50,12 +50,15 @@ export default function Navbar() {
         {/* Navigation */}
         <AnimatePresence>
           {isVisible && (
+            <>
             <motion.nav
-              initial={{ y: -100 }}
-              animate={{ y: 0 }}
+            
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            
               exit={{ y: -100 }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="w-full bg-transparent backdrop-blur-md border-b border-yellow-400/10"
+              className=" hidden lg:block w-full bg-transparent backdrop-blur-md border-b border-yellow-400/10"
             >
               <div className="max-w-7xl mx-auto px-4">
                 <div className="flex items-center justify-evenly h-16 w-full pl-20">
@@ -95,6 +98,14 @@ export default function Navbar() {
                 </div>
               </div>
             </motion.nav>
+            
+            <motion.nav
+            className="lg:hidden block"
+            >
+              Hii
+            </motion.nav>
+            </>
+
           )}
         </AnimatePresence>
       </div>

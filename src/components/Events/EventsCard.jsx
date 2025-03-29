@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 
-const EventsCard = ({ card, index }) => {
+const EventsCard = ({ card, index,id }) => {
   return (
-    <Link href={`/events/${categoryId}/${card.id}`}>
+    <Link href={`/events/${id}/${card.id}`}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -15,8 +15,7 @@ const EventsCard = ({ card, index }) => {
         className="relative bg-transparent text-white p-4 rounded-2xl shadow-lg hover:shadow-2xl transition border-2 border-dotted border-black w-full h-72 flex flex-col overflow-hidden"
       >
         <div className="w-full h-40 relative">
-          <Image
-            src={card.image}
+          <img            src={card.imgSrc}
             alt={card.name}
             layout="fill"
             objectFit="cover"

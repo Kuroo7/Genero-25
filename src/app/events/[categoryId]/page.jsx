@@ -8,6 +8,9 @@ export default function EventCategoryPage() {
   const { categoryId } = useParams();
   const category = eventsData.find((cat) => cat.id === categoryId);
 
+console.log(category);
+
+
   if (!category) {
     return (
       <h1 className="text-red-500 text-center text-2xl">Category Not Found</h1>
@@ -19,21 +22,12 @@ export default function EventCategoryPage() {
       className="min-h-screen flex flex-col items-center py-10 px-4"
       style={{ backgroundImage: "url('/event.jpg')", backgroundSize: "cover" }}
     >
-      <div className="w-full max-w-6xl flex justify-start mb-6">
-        <Link href="/events/egaming/vrgaming">
-          {/* <span className="bg-purple-700 text-black p-2 mb-5 rounded-md hover:bg-purple-900 transition cursor-pointer active:scale-105 active:translate-y-1">
-Back
-</span> */}
-        </Link>
-      </div>
-
       <h1
         style={{ textAlign: "center", marginTop: "30px" }}
         className="pastHead md:text-6xl uppercase font-bold text-amber-400"
       >
         {category.name}
       </h1>
-
       <div className="w-full max-w-6xl mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
         {category.events.map((card, index) => (
           <EventsCard
