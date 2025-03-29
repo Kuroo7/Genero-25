@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -16,28 +14,19 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    {
-      label: "Facebook",
-      path: "https://facebook.com",
-      logo: "/icons/facebook.svg",
-    },
+    { label: "Facebook", path: "https://facebook.com", logo: "/facebook.png" },
     {
       label: "Instagram",
       path: "https://instagram.com",
-      logo: "/icons/instagram.svg",
+      logo: "/instagram.webp",
     },
-    {
-      label: "YouTube",
-      path: "https://youtube.com",
-      logo: "/icons/youtube.svg",
-    },
+    { label: "YouTube", path: "https://youtube.com", logo: "/youtube.png" },
   ];
 
-  const [year, setYear] = useState("2025"); // Default year for SSR
+  const [year, setYear] = useState("2025");
   const [particles, setParticles] = useState([]);
 
   useEffect(() => {
-    // Set year and particles only on the client
     setYear(new Date().getFullYear().toString());
     setParticles(
       [...Array(5)].map(() => ({
@@ -85,24 +74,24 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-black text-white py-8 px-4 md:px-8 overflow-hidden">
+    <footer className="relative bg-black text-white py-6 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#ff00ff_0,rgba(0,0,0,0.9)_70%)] opacity-20 z-0" />
 
       {particles.map((pos, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 bg-purple-500 rounded-full"
+          className="absolute w-1 h-1 bg-purple-500 rounded-full hidden sm:block" // Hide particles on mobile
           style={{ left: pos.left, top: pos.top }}
           variants={particleVariants}
           animate="animate"
         />
       ))}
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Genero'25 at the Top */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <motion.h1
-            className="text-5xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-purple leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-purple leading-tight"
             initial={{ opacity: 0, y: 50 }}
             animate={["animate", { opacity: 1, y: 0 }]}
             transition={{
@@ -119,14 +108,14 @@ const Footer = () => {
         </div>
 
         {/* Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 mb-6">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             className="flex flex-col gap-3"
           >
-            <h3 className="text-xl font-bold text-neon-pink uppercase tracking-wider animate-pulse">
+            <h3 className="text-lg sm:text-xl font-bold text-neon-pink uppercase tracking-wider animate-pulse">
               Links
             </h3>
             <div className="flex flex-col gap-2">
@@ -139,7 +128,7 @@ const Footer = () => {
                 >
                   <Link
                     href={link.path}
-                    className="text-gray-300 text-base hover:text-neon-cyan transition-all duration-300"
+                    className="text-gray-300 text-sm sm:text-base hover:text-neon-cyan transition-all duration-300"
                   >
                     {link.label}
                   </Link>
@@ -154,10 +143,10 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-3"
           >
-            <h3 className="text-xl font-bold text-neon-cyan uppercase tracking-wider animate-pulse">
+            <h3 className="text-lg sm:text-xl font-bold text-neon-cyan uppercase tracking-wider animate-pulse">
               Connect
             </h3>
-            {/* <div className="flex gap-6">
+            <div className="flex gap-4 sm:gap-6">
               {socialLinks.map((link, index) => (
                 <motion.div
                   key={index}
@@ -174,9 +163,9 @@ const Footer = () => {
                     <Image
                       src={link.logo}
                       alt={link.label}
-                      width={30}
-                      height={30}
-                      className="filter brightness-75 hover:brightness-100"
+                      width={24}
+                      height={24}
+                      className="sm:w-8 sm:h-8 filter brightness-75 hover:brightness-100"
                       onError={() =>
                         console.error(`Failed to load ${link.logo}`)
                       }
@@ -184,7 +173,7 @@ const Footer = () => {
                   </a>
                 </motion.div>
               ))}
-            </div> */}
+            </div>
           </motion.div>
 
           <motion.div
@@ -193,10 +182,10 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-3"
           >
-            <h3 className="text-xl font-bold text-neon-purple uppercase tracking-wider animate-pulse">
+            <h3 className="text-lg sm:text-xl font-bold text-neon-purple uppercase tracking-wider animate-pulse">
               Reach Us
             </h3>
-            <div className="flex flex-col gap-2 text-gray-300 text-base">
+            <div className="flex flex-col gap-2 text-gray-300 text-sm sm:text-base">
               <p>
                 Mail:{" "}
                 <a
@@ -225,10 +214,10 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-3"
           >
-            <h3 className="text-xl font-bold text-neon-pink uppercase tracking-wider animate-pulse">
+            <h3 className="text-lg sm:text-xl font-bold text-neon-pink uppercase tracking-wider animate-pulse">
               Location
             </h3>
-            <div className="w-full h-36 rounded-md overflow-hidden">
+            <div className="w-[160px] sm:w-[240px] xl:w-[260px] h-32 sm:h-36 md:h-40 rounded-md overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.856798796725!2d77.44301787528912!3d28.634053675664003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cee22c60837b7%3A0x7c35343eceb7bde0!2sABES%20Engineering%20College!5e0!3m2!1sen!2sin!4v1743009479843!5m2!1sen!2sin"
                 width="100%"
@@ -245,7 +234,7 @@ const Footer = () => {
         {/* Bottom Text Section */}
         <div className="text-center gap-3">
           <motion.p
-            className="text-gray-300 text-base"
+            className="text-gray-300 text-sm sm:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -254,7 +243,7 @@ const Footer = () => {
             College, Ghaziabad
           </motion.p>
           <motion.p
-            className="text-gray-500 text-sm mt-2"
+            className="text-gray-500 text-xs sm:text-sm mt-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}

@@ -3,7 +3,9 @@
 }
 @import "tailwindcss";
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 
 
@@ -38,7 +40,7 @@
 }
 
 body {
-  background: var(--background);
+  background: black;
   color: var(--foreground);
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: 'CustomFont', sans-serif;
@@ -58,10 +60,10 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--background);
+  background-color: black;
   color: var(--white);
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 
@@ -111,4 +113,57 @@ body {
 /* Display Section Styling */
 
 
+/* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+::-webkit-scrollbar-track {
+  background: #000; /* Black background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FFD700, #4B0082, #000);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FFC300, #6A0DAD, #000);
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
