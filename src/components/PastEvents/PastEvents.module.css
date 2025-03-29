@@ -1,45 +1,54 @@
-.gallery{
+.main {
+  background: url("/PastEventsBg1.png");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.gallery {
   height: 175vh;
-  background: rgb(45, 45, 45);
+  /* background: rgb(45, 45, 45); */
+  background: url("/PastEventsBg2.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   gap: 2vw;
   padding: 2vw;
   box-sizing: border-box;
   overflow: hidden;
-  .column{
-      position: relative;
+  .column {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    .imageContainer {
       height: 100%;
-      width: 25%;
-      min-width: 250px;
-      display: flex;
-      flex-direction: column;
-      gap: 2vw;
-      .imageContainer{
-          height: 100%;
-          width: 100%;
-          position: relative;
-          border-radius: 1vw;
-          overflow: hidden;
-          
-      }
-      &:nth-of-type(1){
-          top: -45%;
-      }
-      &:nth-of-type(2){
-          top: -95%;
-      }
-      &:nth-of-type(3){
-          top: -45%;
-      }
-      &:nth-of-type(4){
-          top: -75%;
-      }
+      width: 100%;
+      position: relative;
+      border-radius: 1vw;
+      overflow: hidden;
+    }
+    &:nth-of-type(1) {
+      top: -45%;
+    }
+    &:nth-of-type(2) {
+      top: -95%;
+    }
+    &:nth-of-type(3) {
+      top: -45%;
+    }
+    &:nth-of-type(4) {
+      top: -75%;
+    }
   }
 }
-.imageContainer img{
-    object-fit: cover;
+.imageContainer img {
+  object-fit: cover;
 }
-.spacer{
+.spacer {
   height: 30vh;
 }
