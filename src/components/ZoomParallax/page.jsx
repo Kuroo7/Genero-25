@@ -56,7 +56,7 @@ export default function ZoomParallax() {
 
   return (
     // <div id="past" className="bg-gradient-to-b from-[#1a001a] via-[#4b0082] to-[#d8b4fe] ">
-    <div id="past" className="items-center justify-center bg-[url('/PurpleBg2.png')] bg-contain bg-no-repeat bg-center">
+    <div id="past" className="items-center justify-center bg-[url('/PurpleBg2.png')] bg-contain bg-no-repeat bg-top bg-center">
       <div className="flex h-40  items-center justify-center">
         <h1 className="md:text-9xl text-5xl uppercase font-bold text-white ">
           Past Genero
