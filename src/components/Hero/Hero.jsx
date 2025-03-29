@@ -1,8 +1,7 @@
 "use client";
 import { motion, useTransform } from "framer-motion";
-import styles from "./Hero.module.css";
 import { useRef } from "react";
-import dynamic from "next/dynamic";
+import styles from "./Hero.module.css";
 
 // const Scene = dynamic(() => import("@/components/Clock3d/Scene"), { ssr: false });
 
@@ -16,7 +15,7 @@ const Hero = ({ scrollYProgress }) => {
    
     style={{ scale, rotate }}
    
-     className="h-screen sticky top-0 flex items-center justify-center bg-[url('/hero-bg.jpg')] bg-cover bg-center">
+     className="h-screen sticky top-0 flex items-center justify-center bg-[url('/hero-bg.webp')] bg-cover bg-center">
 
       <div>
         <div className={`${styles.container}`}>

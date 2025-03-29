@@ -1,4 +1,5 @@
 'use client'
+
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -7,8 +8,7 @@ import useMousePosition from './useMousePosition'
 
 export default function AboutSection() {
   const [hoverState, setHoverState] = useState({
-    text: false,
-    image: false
+    text: false
   })
   const { x, y } = useMousePosition()
 
@@ -30,8 +30,8 @@ export default function AboutSection() {
         <div className={styles.maskContent}>
           <div 
             className={styles.textContent}
-            onMouseEnter={() => setHoverState({ text: true, image: false })}
-            onMouseLeave={() => setHoverState({ text: false, image: false })}
+            onMouseEnter={() => setHoverState({ text: true})}
+            onMouseLeave={() => setHoverState({ text: false})}
           >
             <h1 className="md:text-10xl uppercase font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-500 to-red-500 drop-shadow-lg">
               About Genero
@@ -64,7 +64,7 @@ export default function AboutSection() {
 
 
       <div className={styles.body}>
-        <div className={styles.bodyContent}>
+        <div  className={styles.bodyContent}>
           <div className={styles.textContent}>
             <h1 className="md:text-10xl uppercase font-bold text-amber-400 drop-shadow-lg">
               About Genero

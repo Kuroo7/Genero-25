@@ -5,7 +5,7 @@ import Hero from "@/components/Hero/Hero";
 // import LinkButton from "@/components/LinkButton/LinkButton";
 import PastEvents from "@/components/PastEvents/PastEvents";
 
-import PastGenero from "@/components/PastGenero";
+import ScratchTicket from "@/components/ScratchTicket";
 import TextMask from "@/components/TextMask/TextMask";
 import Ticket from "@/components/Ticket/Ticket";
 import ZoomParallax from "@/components/ZoomParallax/page";
@@ -39,10 +39,10 @@ export default function Home() {
         <About scrollYProgress={scrollYProgress} />
       </div>
       <ZoomParallax />
-      <PastEvents />
-
+      <PastEvents />      
       <TextMask />
       <Faq />
+      <ScratchTicket/>
       <Ticket />
     </div>
   );
