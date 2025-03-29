@@ -2,17 +2,21 @@
   z-index: 1;
 }
   
-  .container{
-    position: relative;
-    height: 200vh;
-    /* width: 100vw; */
-    /* background-color: rgba(199, 53, 210, 0.999); */
-    /* background: linear-gradient(135deg, #1a001a, #4b0082, #8a2be2); */
-    background: url("/PastEventsBg2.png");
-    background-position: top center;
-    background-size: contain;
-    background-repeat: no-repeat;
+.container {
+  position: relative;
+  height: 200vh;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/PastEventsBg2.png") center / cover no-repeat;
+    opacity: 0.4; 
+    z-index: -1; 
   }
+}
+
   
   .stickyMask{
     display: flex;

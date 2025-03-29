@@ -1,13 +1,12 @@
-.main {
+.spacer {
   background: url("/PastEventsBg1.png");
-  background-size: contain;
-  background-position: top center;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .gallery {
   height: 175vh;
   /* background: rgb(45, 45, 45); */
-  background: url("/PastEventsBg2.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -17,6 +16,15 @@
   padding: 2vw;
   box-sizing: border-box;
   overflow: hidden;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/PastEventsBg2.png") center / cover no-repeat;
+    opacity: 0.4; 
+    z-index: -1; 
+  }
   .column {
     position: relative;
     height: 100%;
