@@ -17,10 +17,13 @@ export const ScratchToReveal = ({
   gradientColors = ["#9370DB", "#8A2BE2", "#4B0082"],
 }) => {
   const canvasRef = useRef(null);
+  const containerRef = useRef(null);
   const [isScratching, setIsScratching] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
   const controls = useAnimation();
+  const startPos = useRef({ x: 0, y: 0 });
 
+  // Initialize canvas
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext("2d");
@@ -38,6 +41,7 @@ export const ScratchToReveal = ({
     }
   }, [width, height, gradientColors, isComplete]);
 
+  // Event handlers
   useEffect(() => {
     const handleMove = (x, y) => {
       if (isComplete) return;
@@ -53,26 +57,71 @@ export const ScratchToReveal = ({
       ctx.fill();
     };
 
-    const mouseMove = (e) => handleMove(e.clientX, e.clientY);
-    const touchMove = (e) => {
-      e.preventDefault();
-      handleMove(e.touches[0].clientX, e.touches[0].clientY);
+    const mouseMove = (e) => {
+      if (isScratching) {
+        e.preventDefault();
+        handleMove(e.clientX, e.clientY);
+      }
     };
+    
+    const touchMove = (e) => {
+      if (!isScratching) return;
+      
+      const touch = e.touches[0];
+      const dx = Math.abs(touch.clientX - startPos.current.x);
+      const dy = Math.abs(touch.clientY - startPos.current.y);
+      
+      if (dy > dx && dy > 10) {
+        setIsScratching(false);
+        return;
+      }
+      
+      e.preventDefault();
+      handleMove(touch.clientX, touch.clientY);
+    };
+
+    const startScratching = (x, y) => {
+      startPos.current = { x, y };
+      setIsScratching(true);
+    };
+
+    const mouseDown = (e) => {
+      if (e.button === 0) { // Only left mouse button
+        startScratching(e.clientX, e.clientY);
+        e.preventDefault();
+      }
+    };
+
+    const touchStart = (e) => {
+      startScratching(e.touches[0].clientX, e.touches[0].clientY);
+      e.preventDefault();
+    };
+
     const endScratching = () => {
       setIsScratching(false);
       checkCompletion();
     };
 
-    document.addEventListener("mousemove", mouseMove);
-    document.addEventListener("touchmove", touchMove, { passive: false });
+    const container = containerRef.current;
+    const canvas = canvasRef.current;
+
+    if (!container || !canvas) return;
+
+    // Only attach to canvas element, not document
+    canvas.addEventListener("mousedown", mouseDown);
+    canvas.addEventListener("touchstart", touchStart, { passive: false });
     document.addEventListener("mouseup", endScratching);
     document.addEventListener("touchend", endScratching);
+    document.addEventListener("mousemove", mouseMove);
+    document.addEventListener("touchmove", touchMove, { passive: false });
 
     return () => {
-      document.removeEventListener("mousemove", mouseMove);
-      document.removeEventListener("touchmove", touchMove);
+      canvas.removeEventListener("mousedown", mouseDown);
+      canvas.removeEventListener("touchstart", touchStart);
       document.removeEventListener("mouseup", endScratching);
       document.removeEventListener("touchend", endScratching);
+      document.removeEventListener("mousemove", mouseMove);
+      document.removeEventListener("touchmove", touchMove);
     };
   }, [isScratching, isComplete]);
 
@@ -101,6 +150,7 @@ export const ScratchToReveal = ({
 
   return (
     <motion.div
+      ref={containerRef}
       className={cn("relative select-none", className)}
       style={{ width, height }}
       animate={controls}
@@ -109,11 +159,6 @@ export const ScratchToReveal = ({
         <canvas
           ref={canvasRef}
           className="absolute inset-0 z-10 cursor-scratch"
-          onMouseDown={() => !isComplete && setIsScratching(true)}
-          onTouchStart={(e) => {
-            e.preventDefault();
-            !isComplete && setIsScratching(true);
-          }}
         />
       )}
       {children}
