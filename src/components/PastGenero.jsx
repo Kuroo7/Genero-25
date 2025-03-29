@@ -75,7 +75,7 @@ const Card = ({ card, isLast, isEnd }) => {
 
   return (
     <motion.div
-      className="group relative   h-[350px] w-[350px] sm:h-[400px] sm:w-[400px] md:h-[450px] md:w-[450px]  overflow-hidden bg-amber-100 border-4 border-amber-200 shadow-lg"
+      className="group relative  h-[350px] w-[350px] sm:h-[400px] sm:w-[400px] md:h-[450px] md:w-[450px]  overflow-hidden bg-amber-100 border-4 border-amber-200 shadow-lg"
       animate={isLast && isEnd ? { scale: scaleFactor, x: tx } : { scale: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
