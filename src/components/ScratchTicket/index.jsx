@@ -47,7 +47,7 @@ export default function TicketSection() {
               width={900}
               height={300}
               minScratchPercentage={15}
-              className="mx-auto w-full max-w-4xl"
+              className="mx-auto hidden md:block w-full max-w-4xl"
               gradientColors={["#d4af37", "#f1e5ac", "#d4af37"]}
               onScratchComplete={() => setIsScratched(true)}
             >

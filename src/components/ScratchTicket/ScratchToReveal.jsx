@@ -151,7 +151,7 @@ export const ScratchToReveal = ({
   return (
     <motion.div
       ref={containerRef}
-      className={cn("relative select-none", className)+"hidden md:block "}
+      className={cn("relative select-none", className)}
       style={{ width, height }}
       animate={controls}
     >

@@ -31,15 +31,13 @@ export default function Index() {
  <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="absolute left-4 top-3 z-50"
+          className="fixed left-4 top-3 z-50"
         >
           <Link href="/">
             <img src="/logo.png" alt="Logo" className="w-10 h-10 cursor-pointer" />
           </Link>
         </motion.div>
         <div className={styles.header}>
-           
-
             <motion.div 
                 className={styles.menu}
                 variants={menu}
