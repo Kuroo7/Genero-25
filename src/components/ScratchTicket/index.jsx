@@ -10,7 +10,7 @@ export default function TicketSection() {
   const [isScratched, setIsScratched] = useState(false);
 
   return (
-    <div id="register" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 py-12 px-4">
+    <div id="ticket" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 py-12 px-4">
       {/* Background Elements */}
       <div className="fixed inset-0 -z-10 opacity-20">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/sacred-pattern.png')] bg-repeat opacity-30" />

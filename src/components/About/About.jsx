@@ -36,7 +36,7 @@ export default function AboutSection() {
             <h1 className="md:text-10xl uppercase font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-500 to-red-500 drop-shadow-lg">
               About Genero
             </h1>
-            <p className="text-gray-300">
+            <p className="text-black">
               ✨ Genero, the annual fest of ABES, returns **grander than ever** for its **25th anniversary**! This **three-day extravaganza** is a gateway to a realm of art, music, gaming, and creativity.  
               🌟 Step into a universe where dreams unfold, **talent shines**, and unforgettable moments are forged.  
             </p>
