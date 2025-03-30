@@ -2,19 +2,31 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation"; // Import usePathname
 import { motion, AnimatePresence } from "framer-motion";
-import { BookOpen, Swords, Shield, Sparkles, BookMarked } from "lucide-react";
 import Link from "next/link";
+
+// Icons
+import {
+  BookOpen,
+  Info,
+  History,
+  Sparkles,
+  CalendarDays,
+  HelpCircle,
+  Clock,
+  Users,
+  Ticket,
+} from "lucide-react";
 
 const navItems = [
   { name: "HOME", href: "/", icon: BookOpen },
-  { name: "ABOUT", href: "/#about", icon: Swords },
-  { name: "PAST", href: "/#past", icon: Shield },
+  { name: "ABOUT", href: "/#about", icon: Info },
+  { name: "PAST", href: "/#past", icon: History },
   { name: "THIS YEAR", href: "/#thisyear", icon: Sparkles },
-  { name: "EVENTS", href: "/events", icon: BookMarked },
-  { name: "FAQ", href: "/#faq", icon: BookMarked },
-  { name: "SCHEDULE", href: "#", icon: BookMarked },
-  { name: "TEAM", href: "/team", icon: BookMarked },
-  { name: "GET TICKET", href: "#ticket", icon: BookMarked },
+  { name: "EVENTS", href: "/events", icon: CalendarDays },
+  { name: "FAQ", href: "/#faq", icon: HelpCircle },
+  { name: "SCHEDULE", href: "#", icon: Clock },
+  { name: "TEAM", href: "/team", icon: Users },
+  { name: "GET TICKET", href: "/#ticket", icon: Ticket },
 ];
 
 export default function Navbar() {
