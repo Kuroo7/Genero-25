@@ -35,7 +35,7 @@ export default function TicketSection() {
 
         {!isScratched && section === 0 && (
           <div className="text-center mb-6">
-            <p className="text-amber-300 italic text-lg">
+            <p className="hidden md:block text-amber-300 italic text-lg">
               Scratch to reveal your sacred ticket
             </p>
           </div>
