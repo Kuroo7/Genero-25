@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import CustomCursor from '@/components/CustomCursor';
 import Sidebar from "@/components/SideBar/page";
+import BuyTicketButton from "@/components/BuyTicketButton/BuyTicketButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <Navbar/>
         <Sidebar/>
         <CustomCursor/> 
+        <BuyTicketButton/>
         {/* <Tabs/> */}
         {children}
         <Footer />
