@@ -1,11 +1,12 @@
 import styles from "./styles.module.scss";
+// ../../../public/PastEvents/8.webp
+import Picture6 from "../../../public/PastEvents/8.webp";
 import Picture1 from "../../../public/History/2015.jpeg";
-import Picture2 from "../../../public/History/2016.jpeg";
-import Picture3 from "../../../public/History/2017.jpeg";
-import Picture4 from "../../../public/History/2019.jpeg";
-import Picture5 from "../../../public/image5.jpg";
-import Picture6 from "../../../public/image6.jpg";
-import Picture7 from "../../../public/image7.jpg";
+import Picture3 from "../../../public/History/2016.jpeg";
+import Picture4 from "../../../public/History/2017.jpeg";
+import Picture5 from "../../../public/History/2015.jpeg";
+import Picture7 from "../../../public/History/2016.jpeg";
+import Picture2 from "../../../public/History/2017.jpeg";
 import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
@@ -68,6 +69,7 @@ export default function ZoomParallax() {
             return (
               <motion.div key={index} style={{ scale }} className={styles.el}>
                 <div className={styles.imageContainer}>
+                <h1 className="relative top-0 z-10 ">{}</h1>
                   <Image src={src} fill alt="image" placeholder="blur" />
                 </div>
               </motion.div>

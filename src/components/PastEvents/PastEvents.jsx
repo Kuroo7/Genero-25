@@ -8,20 +8,20 @@ import Lenis from 'lenis'
 import { useTransform, useScroll, motion } from 'framer-motion';
 
 const images = [
-  "/pastEvents/img1.jpeg",
-  "/pastEvents/img2.jpeg",
-  "/pastEvents/img3.jpeg",
-  "/pastEvents/img4.jpeg",
-  "/pastEvents/img5.jpeg",
-  "/pastEvents/img6.jpeg",
-  "/pastEvents/img7.jpeg",
-  "/pastEvents/img1.jpeg",
-  "/pastEvents/img2.jpeg",
-  "/pastEvents/img3.jpeg",
-  "/pastEvents/img4.jpeg",
-  "/pastEvents/img5.jpeg",
-  "/pastEvents/img6.jpeg",
-  "/pastEvents/img7.jpeg"
+  "/pastEvents/1.webp",
+  "/pastEvents/2.webp",
+  "/pastEvents/3.webp",
+  "/pastEvents/4.webp",
+  "/pastEvents/5.webp",
+  "/pastEvents/6.webp",
+  "/pastEvents/7.webp",
+  "/pastEvents/8.webp",
+  "/pastEvents/9.webp",
+  "/pastEvents/10.webp",
+  "/pastEvents/11.webp",
+  "/pastEvents/12.webp",
+  "/pastEvents/5.webp",
+  "/pastEvents/7.webp"
 
 ]
 
