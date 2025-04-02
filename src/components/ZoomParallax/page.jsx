@@ -1,12 +1,13 @@
 import styles from "./styles.module.scss";
 // ../../../public/PastEvents/8.webp
-import Picture6 from "../../../public/PastEvents/8.webp";
+// import Picture6 from "../../../public/PastEvents/8.webp";
 import Picture1 from "../../../public/History/2015.jpeg";
-import Picture3 from "../../../public/History/2016.jpeg";
-import Picture4 from "../../../public/History/2017.jpeg";
-import Picture5 from "../../../public/History/2015.jpeg";
-import Picture7 from "../../../public/History/2016.jpeg";
-import Picture2 from "../../../public/History/2017.jpeg";
+import Picture2 from "../../../public/History/2016.jpeg";
+import Picture3 from "../../../public/History/2017.jpeg";
+import Picture4 from "../../../public/History/img5.jpeg";
+import Picture5 from "../../../public//History/img12.jpeg";
+import Picture6 from "../../../public/History/2023.jpeg";
+import Picture7 from "../../../public/History/img10.jpeg";
 import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";

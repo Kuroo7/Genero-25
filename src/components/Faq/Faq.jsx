@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "What is the theme of Genero?",
     answer:
-      "The theme of Genero'25 is 'The Secret Legacy'. It symbolizes hidden knowledge, forgotten innovations, and the unseen impact of technology. It challenges participants to uncover mysteries, push boundaries, and create their own lasting legacy.",
+      "The theme of Genero'25 is 'The Sacred Legacy'. It symbolizes hidden knowledge, forgotten innovations, and the unseen impact of technology. It challenges participants to uncover mysteries, push boundaries, and create their own lasting legacy.",
   },
   {
     question: "Can students from other colleges also participate in the events?",

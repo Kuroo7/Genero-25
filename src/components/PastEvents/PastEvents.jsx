@@ -1,5 +1,3 @@
-
-
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import styles from './PastEvents.module.scss'
@@ -8,25 +6,37 @@ import Lenis from 'lenis'
 import { useTransform, useScroll, motion } from 'framer-motion';
 
 const images = [
-  "/PastEvents/1.webp",
-  "/PastEvents/2.webp",
-  "/PastEvents/3.webp",
-  "/PastEvents/4.webp",
-  "/PastEvents/5.webp",
-  "/PastEvents/6.webp",
-  "/PastEvents/7.webp",
-  "/PastEvents/8.webp",
-  "/PastEvents/9.webp",
-  "/PastEvents/10.webp",
-  "/PastEvents/11.webp",
-  "/PastEvents/12.webp",
-  "/PastEvents/5.webp",
-  "/PastEvents/7.webp"
-
-]
-
-export default function Home() {
+  "/pastEvents/img1.jpeg",
+  "/pastEvents/img2.jpeg",
+  "/pastEvents/img3.jpeg",
+  "/pastEvents/img4.jpeg",
+  "/pastEvents/img5.jpeg",
+  "/pastEvents/img6.jpeg",
+  "/pastEvents/img7.jpeg",
+  "/pastEvents/img8.jpeg",
+  "/pastEvents/img9.jpeg",
+  "/pastEvents/img10.jpeg",
+  "/pastEvents/img11.jpeg",
+  "/pastEvents/img12.jpeg",
+  "/pastEvents/img13.jpeg",
+  "/pastEvents/img14.jpeg"
   
+  // "/image2.jpg",
+  // "/image3.jpg",
+  // "/image4.jpg",
+  // "/image5.jpg",
+  // "/image6.jpg",
+  // "/image7.jpg",
+  // "/image1.jpg",
+  // "/image2.jpg",
+  // "/image3.jpg",
+  // "/image4.jpg",
+  // "/image5.jpg",
+  // "/image6.jpg",
+  // "/image7.jpg",
+];
+
+export default function PastEvents() {
   const gallery = useRef(null);
   const [dimension, setDimension] = useState({width:0, height:0});
 

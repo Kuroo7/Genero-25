@@ -29,15 +29,16 @@ console.log(category);
         {category.name}
       </h1>
       <div className="w-full max-w-6xl mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {category.events.map((card, index) => (
-          <EventsCard
-            key={card.id}
-            card={card}
-            index={index}
-            id={category.id}
-          />
-        ))}
-      </div>
+  {category.events.map((card, index) => (
+    <EventsCard
+      key={card.id}
+      card={card}
+      index={index}
+      id={category.id}
+    />
+  ))}
+</div>
+
     </div>
     // <div className="p-6">
     //   <h1 className="text-3xl font-bold mb-4">{category.name}</h1>

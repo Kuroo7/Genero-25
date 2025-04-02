@@ -31,22 +31,29 @@ export default function EventDetailsPage() {
     
           {/* Right Side - Content */}
           <div className="md:w-2/3 text-center md:text-left">
-            <h1 className="text-5xl md:text-6xl font-bold text-white uppercase mb-6">
-             {event.name}
-            </h1>
-            <p className="text-white text-lg max-w-4xl">
-              {event.description}
-            </p>
-    
-            <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mt-10">
-              Rules
-            </h2>
-            <ul className="text-white text-lg max-w-3xl text-left mt-4 list-decimal list-inside space-y-2">
-       {event.rules.map((rule, index) => (
-          <li key={index} className="text-gray-700">{rule}</li>
-        ))}
-       </ul>
-          </div>
+  {/* Event Name - More Prominent */}
+  <h1 className="text-5xl md:text-6xl font-extrabold text-white uppercase mb-6 tracking-wide drop-shadow-lg">
+    {event.name}
+  </h1>
+
+  {/* Description - Better Readability */}
+  <p className="text-lg text-gray-300 leading-relaxed max-w-4xl bg-gray-800 p-4 rounded-lg shadow-md">
+    {event.description}
+  </p>
+
+  {/* Rules Section - Stylish & Readable */}
+  <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 uppercase mt-10">
+    Rules
+  </h2>
+  <div className="text-lg max-w-3xl text-left mt-4 space-y-3 bg-gray-800 p-5 rounded-lg shadow-md">
+    {event.rules.map((rule, index) => (
+      <p key={index} className="text-gray-300 hover:text-white transition-all duration-300">
+        🔹 {rule}
+      </p>
+    ))}
+  </div>
+</div>
+
         </div>
   );
 }

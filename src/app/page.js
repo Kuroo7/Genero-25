@@ -4,7 +4,7 @@ import Break from "@/components/Break";
 import Faq from "@/components/Faq/Faq";
 import Hero from "@/components/Hero/Hero";
 // import LinkButton from "@/components/LinkButton/LinkButton";
-import PastEvents from "@/components/PastEvents/PastEvents";
+import PastEvents from "../components/PastEvents/PastEvents";
 
 import ScratchTicket from "@/components/ScratchTicket";
 import TextMask from "@/components/TextMask/TextMask";

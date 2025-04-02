@@ -5,7 +5,7 @@ export const links = [
     // { title: "THIS YEAR", href: "/#thisyear"},
     { title: "EVENTS", href: "/events" },
     // { title: "FAQ", href: "/#faq" },
-    { title: "SCHEDULE", href: "#"},
+    { title: "SCHEDULE", href: "/schedule" },
     { title: "TEAM", href: "/team" },
     { title: "GET TICKET", href: "/#ticket"},
 
