@@ -1,16 +1,19 @@
 "use client";
-import Image from 'next/image';
-import { useState } from 'react';
-import qr1 from '../../../public/Registration/qr-abes.png';
-import qr2 from '../../../public/Registration/qr-nonabes.png';
-import { ScratchToReveal } from './ScratchToReveal';
+import Image from "next/image";
+import { useState } from "react";
+import qr1 from "../../../public/Registration/qr-abes.png";
+import qr2 from "../../../public/Registration/qr-nonabes.png";
+import { ScratchToReveal } from "./ScratchToReveal";
 
 export default function TicketSection() {
   const [section, setSection] = useState(0);
   const [isScratched, setIsScratched] = useState(false);
 
   return (
-    <div id="ticket" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 py-12 px-4">
+    <div
+      id="ticket"
+      className="min-h-screen flex items-center justify-center bg-black py-12 px-4"
+    >
       {/* Background Elements */}
       <div className="fixed inset-0 -z-10 opacity-20">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/sacred-pattern.png')] bg-repeat opacity-30" />
@@ -21,21 +24,21 @@ export default function TicketSection() {
         <div className="flex items-center justify-around mx-auto max-w-xs w-full mb-8">
           <button
             onClick={() => setSection(0)}
-            className={`${section === 0 ? 'bg-amber-600 text-white' : 'border border-amber-600 text-amber-400'} rounded px-4 py-2 cursor-pointer transition-colors font-medium`}
+            className={`${section === 0 ? "bg-amber-500 text-black" : "border border-amber-500 text-amber-500"} rounded px-3 py-1 cursor-pointer transition-colors font-medium`}
           >
             Ticket
           </button>
           <button
             onClick={() => setSection(1)}
-            className={`${section === 1 ? 'bg-amber-600 text-white' : 'border border-amber-600 text-amber-400'} rounded px-4 py-2 cursor-pointer transition-colors font-medium`}
+            className={`${section === 1 ? "bg-amber-500 text-black" : "border border-amber-500 text-amber-500"} rounded px-3 py-1 cursor-pointer transition-colors font-medium`}
           >
             Rules
           </button>
         </div>
 
         {!isScratched && section === 0 && (
-          <div className="text-center mb-6">
-            <p className="hidden md:block text-amber-300 italic text-lg">
+          <div className="hidden md:block text-center mb-8">
+            <p className="text-amber-400 italic text-lg font-serif animate-pulse">
               Scratch to reveal your sacred ticket
             </p>
           </div>
@@ -43,97 +46,30 @@ export default function TicketSection() {
 
         <div className="flex items-center justify-center w-full">
           {section === 0 ? (
-            <ScratchToReveal
-              width={900}
-              height={300}
-              minScratchPercentage={15}
-              className="mx-auto hidden md:block w-full max-w-4xl"
-              gradientColors={["#d4af37", "#f1e5ac", "#d4af37"]}
-              onScratchComplete={() => setIsScratched(true)}
-            >
-              <div className="ticket w-full flex flex-col md:flex-row bg-gradient-to-r from-amber-900/70 to-amber-800/80 shadow-lg">
-                {/* Stub Section - Hidden on mobile */}
-                <div className="stub hidden md:block bg-gradient-to-b from-amber-800 to-amber-900 w-full md:w-[250px] h-[300px] p-5 relative">
-                  <div className="absolute inset-0 bg-[url('/sacred-pattern.png')] opacity-10" />
-                  <div className="top flex items-center h-10 relative z-10">
-                    <span className="admit text-amber-100 font-medium">Admit</span>
-                    <span className="line bg-amber-500 h-10 w-[3px] mx-5"></span>
-                    <span className="num text-xs text-amber-200">Invitation</span>
-                  </div>
-                  <div className="number absolute left-10 text-[150px] text-amber-700/60 font-serif">1</div>
-                  <div className="invite absolute left-[150px] bottom-[45px] text-amber-200 w-1/5">
-                    <div className="h-[3px] w-10 bg-amber-500 mb-2"></div>
-                    <p className="text-sm font-medium">Invite for you</p>
-                  </div>
-                </div>
-
-                {/* Main Ticket Section */}
-                <div className="check bg-gradient-to-b from-amber-900/40 to-amber-800/50 w-full md:w-[600px] h-[300px] p-4 md:p-10 flex flex-col md:flex-row items-center justify-around">
-                  <div className="flex-1">
-                    <div className="big text-4xl md:text-7xl font-serif font-bold text-amber-100 mb-4 md:mb-8">
-                      You're <br /> Invited
-                    </div>
-                    <div className="info flex flex-col md:flex-row gap-4 md:gap-10 text-amber-100">
-                      <section>
-                        <div className="h-[3px] w-10 bg-amber-500 mb-2"></div>
-                        <div className="title text-xs uppercase text-amber-300 font-bold">Date</div>
-                        <div className="font-medium">DD/MM/YYYY</div>
-                      </section>
-                      <section>
-                        <div className="h-[3px] w-10 bg-amber-500 mb-2"></div>
-                        <div className="title text-xs uppercase text-amber-300 font-bold">Issued By</div>
-                        <div className="font-medium">GENERO'25</div>
-                      </section>
-                      <section>
-                        <div className="h-[3px] w-10 bg-amber-500 mb-2"></div>
-                        <div className="title text-xs uppercase text-amber-300 font-bold">Invite Number</div>
-                        <div className="font-medium">XYXXZERO</div>
-                      </section>
-                    </div>
-                  </div>
-                  <div className="qr-box-contain flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 h-full md:h-auto mt-4 md:mt-0">
-                    <div className="qr-box flex flex-col items-center bg-amber-900/30 p-3 rounded-lg">
-                      <Image 
-                        src={qr1} 
-                        width={120} 
-                        height={120} 
-                        alt="ABES Students QR" 
-                        className="w-20 h-20 md:w-[120px] md:h-[120px]"
-                      />
-                      <a 
-                        href="https://rzp.io/l/OLuKyJ3" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-amber-100 hover:text-amber-50 text-xs md:text-sm flex items-center mt-2 font-medium"
-                      >
-                        #ABESEC <span className="ml-1 text-xs">↗</span>
-                      </a>
-                    </div>
-                    <div className="qr-box flex flex-col items-center bg-amber-900/30 p-3 rounded-lg">
-                      <Image 
-                        src={qr2} 
-                        width={120} 
-                        height={120} 
-                        alt="Non-ABES Students QR" 
-                        className="w-20 h-20 md:w-[120px] md:h-[120px]"
-                      />
-                      <a 
-                        href="https://rzp.io/l/9ELBp2Vi1" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-amber-100 hover:text-amber-50 text-xs md:text-sm flex items-center mt-2 font-medium"
-                      >
-                        #NONABESEC <span className="ml-1 text-xs">↗</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+            <>
+              {/* Desktop view with scratch effect */}
+              <div className="hidden md:block">
+                <ScratchToReveal
+                  width={900}
+                  height={300}
+                  minScratchPercentage={15}
+                  className="mx-auto w-full max-w-[900px]"
+                  gradientColors={["#8B5A2B", "#B88A5D", "#8B5A2B"]} // Brown/gold gradient for sacred theme
+                  onScratchComplete={() => setIsScratched(true)}
+                >
+                  <TicketContent qr1={qr1} qr2={qr2} />
+                </ScratchToReveal>
               </div>
-            </ScratchToReveal>
+              
+              {/* Mobile view without scratch effect */}
+              <div className="md:hidden w-full">
+                <TicketContent qr1={qr1} qr2={qr2} />
+              </div>
+            </>
           ) : (
-            <div className="w-full max-w-2xl mx-auto bg-gradient-to-b from-amber-900/20 to-amber-800/30 backdrop-blur-sm border border-amber-700/30 rounded-xl p-6 md:p-8 shadow-xl shadow-amber-900/20">
+            <div className="w-full max-w-2xl mx-auto bg-gray-800/30 backdrop-blur-sm border border-amber-500/30 rounded-xl p-6 md:p-8 shadow-xl shadow-amber-900/20">
               <p className="text-amber-200 mb-4 font-medium">Following are the rules to be followed by all the participants:</p>
-              <ol className="text-amber-300 space-y-3">
+              <ol className="text-amber-100 space-y-3">
                 <li className="flex items-start">
                   <span className="text-amber-500 mr-2">•</span>
                   <span>Treat the campus with respect and care, and avoid littering or damaging property.</span>
@@ -167,36 +103,264 @@ export default function TicketSection() {
           )}
         </div>
       </div>
+    </div>
+  );
+}
 
-      {/* Mobile-specific styles */}
-      <style jsx global>{`
-        @media screen and (max-width: 768px) {
+function TicketContent({ qr1, qr2 }) {
+  return (
+    <div className="ticket flex flex-col md:flex-row bg-white shadow-lg">
+      {/* Stub Section - Hidden on mobile */}
+      <div className="stub hidden md:block bg-[#8B5A2B] w-[250px] h-[300px] p-5 relative text-white">
+        <div className="absolute inset-0 bg-[url('/sacred-pattern.png')] opacity-10" />
+        <div className="top flex items-center h-10 uppercase">
+          <span className="admit font-medium">Admit</span>
+          <span className="line bg-white h-10 w-[3px] mx-5"></span>
+          <span className="num text-xs">Invitation</span>
+        </div>
+        <div className="number absolute left-10 text-[150px] text-white/60 font-serif">1</div>
+        <div className="invite absolute left-[150px] bottom-[45px] text-white w-1/5">
+          <div className="h-[3px] w-10 bg-white mb-2"></div>
+          <p className="text-sm font-medium">Invite for you</p>
+        </div>
+        {/* Triangles for stub edges */}
+        <div className="absolute top-0 right-0 border-t-[20px] border-t-[#5D3A1A] border-l-[20px] border-l-[#8B5A2B]"></div>
+        <div className="absolute bottom-0 right-0 border-b-[20px] border-b-[#5D3A1A] border-l-[20px] border-l-[#8B5A2B]"></div>
+      </div>
+
+      {/* Main Ticket Section */}
+      <div className="check bg-white w-full md:w-[600px] h-[300px] p-10 flex flex-col md:flex-row items-center justify-around relative">
+        <div className="flex-1">
+          <div className="big text-5xl md:text-7xl font-bold text-black mb-4 md:mb-8 leading-tight">
+            You're <br /> Invited
+          </div>
+          <div className="info flex flex-col md:flex-row gap-4 md:gap-10 text-black">
+            <section>
+              <div className="h-[3px] w-10 bg-[#8B5A2B] mb-2"></div>
+              <div className="title text-xs uppercase font-bold">Date</div>
+              <div className="font-medium">DD/MM/YYYY</div>
+            </section>
+            <section>
+              <div className="h-[3px] w-10 bg-[#8B5A2B] mb-2"></div>
+              <div className="title text-xs uppercase font-bold">Issued By</div>
+              <div className="font-medium">SACRED LEGACY</div>
+            </section>
+            <section>
+              <div className="h-[3px] w-10 bg-[#8B5A2B] mb-2"></div>
+              <div className="title text-xs uppercase font-bold">Invite Number</div>
+              <div className="font-medium">XYXXZERO</div>
+            </section>
+          </div>
+        </div>
+        <div className="qr-box-contain flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 h-full">
+          <div className="qr-box flex flex-col items-center justify-center h-[120px] md:h-[150px] w-[120px] md:w-[150px] bg-transparent">
+            <Image
+              src={qr1}
+              width={100}
+              height={100}
+              alt="ABES Students QR"
+              className="w-[100px] h-[100px] md:w-[100px] md:h-[100px]"
+            />
+            <a
+              href="https://rzp.io/l/OLuKyJ3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black text-xs md:text-sm font-bold mt-2 flex items-center"
+            >
+              #ABESEC <span className="ml-1 md:ml-2 text-xs md:text-sm">↗</span>
+            </a>
+          </div>
+          <div className="qr-box flex flex-col items-center justify-center h-[120px] md:h-[150px] w-[120px] md:w-[150px] bg-transparent">
+            <Image
+              src={qr2}
+              width={100}
+              height={100}
+              alt="Non-ABES Students QR"
+              className="w-[100px] h-[100px] md:w-[100px] md:h-[100px]"
+            />
+            <a
+              href="https://rzp.io/l/9ELBp2Vi1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black text-xs md:text-sm font-bold mt-2 flex items-center"
+            >
+              #NONABESEC <span className="ml-1 md:ml-2 text-xs md:text-sm">↗</span>
+            </a>
+          </div>
+        </div>
+        {/* Triangles for check edges */}
+        <div className="absolute top-0 left-0 border-t-[20px] border-t-[#5D3A1A] border-r-[20px] border-r-white"></div>
+        <div className="absolute bottom-0 left-0 border-b-[20px] border-b-[#5D3A1A] border-r-[20px] border-r-white"></div>
+      </div>
+
+      {/* Global styles including mobile-specific adjustments */}
+      <style jsx>{`
+        .ticket {
+          font-family: "Montserrat", sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          max-width: 900px;
+          margin: 0 auto;
+          color: #000 !important;
+          border-radius: 0;
+        }
+
+        .stub {
+          background: #8B5A2B; /* Brown color for sacred theme */
+          height: 300px;
+          width: 250px;
+          color: white;
+          padding: 20px;
+          position: relative;
+        }
+
+        .stub .top {
+          display: flex;
+          align-items: center;
+          height: 40px;
+          text-transform: uppercase;
+          position: relative;
+          z-index: 2;
+        }
+
+        .stub .top .line {
+          display: block;
+          background: #fff;
+          height: 40px;
+          width: 3px;
+          margin: 0 20px;
+        }
+
+        .stub .number {
+          position: absolute;
+          left: 40px;
+          font-size: 150px;
+          color: rgba(255, 255, 255, 0.3);
+          font-family: serif;
+          z-index: 1;
+        }
+
+        .check {
+          background: #fff;
+          height: auto;
+          min-height: 300px;
+          width: 100%;
+          padding: 20px;
+          position: relative;
+        }
+
+        .big {
+          font-size: 2.5rem;
+          font-weight: 900;
+          line-height: 1em;
+          color: black !important;
+        }
+
+        .info {
+          display: flex;
+          justify-content: flex-start;
+          font-size: 12px;
+          margin-top: 20px;
+          width: 100%;
+          color: #000 !important;
+        }
+
+        .info section {
+          margin-right: 0;
+        }
+
+        .qr-box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 120px;
+          width: 120px;
+        }
+
+        .qr-box a {
+          font-size: 12px;
+          text-align: center;
+          color: black !important;
+          font-weight: 700;
+          margin-top: 10px;
+        }
+
+        .qr-box-contain {
+          display: flex;
+          flex-direction: row;
+          height: auto;
+          justify-content: center;
+          gap: 20px;
+          margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
           .ticket {
-            width: 90vw;
+            border-radius: 0;
+          }
+          
+          .check {
+            height: 300px;
+            padding: 40px;
+          }
+          
+          .big {
+            font-size: 80px;
+          }
+          
+          .info {
+            flex-direction: row;
+            gap: 50px;
+          }
+          
+          .qr-box-contain {
+            flex-direction: column;
+            height: 300px;
+            margin-top: 0;
+          }
+          
+          .qr-box {
+            height: 150px;
+            width: 150px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .ticket {
+            flex-direction: column;
             border-radius: 10px;
             overflow: hidden;
           }
+          
           .check {
-            flex-direction: column;
-            height: auto;
             padding: 20px;
           }
-          .qr-box-contain {
-            flex-direction: row;
-            width: 100%;
-            margin-top: 20px;
+          
+          .big {
+            text-align: center;
+            margin-bottom: 20px;
           }
+          
           .info {
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 20px;
           }
+          
           .info section {
-            margin: 10px 0;
+            margin-bottom: 20px;
           }
+          
           .info section:before {
-            display: none;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          .qr-box-contain {
+            margin-top: 20px;
           }
         }
       `}</style>
