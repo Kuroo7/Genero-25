@@ -1,39 +1,25 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
-import styles from './PastEvents.module.scss'
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Lenis from 'lenis';
 import Image from 'next/image';
-import Lenis from 'lenis'
-import { useTransform, useScroll, motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import styles from './PastEvents.module.scss';
 
 const images = [
-  "/pastEvents/img1.jpeg",
-  "/pastEvents/img2.jpeg",
-  "/pastEvents/img3.jpeg",
-  "/pastEvents/img4.jpeg",
-  "/pastEvents/img5.jpeg",
-  "/pastEvents/img6.jpeg",
-  "/pastEvents/img7.jpeg",
-  "/pastEvents/img8.jpeg",
-  "/pastEvents/img9.jpeg",
-  "/pastEvents/img10.jpeg",
-  "/pastEvents/img11.jpeg",
-  "/pastEvents/img12.jpeg",
-  "/pastEvents/img13.jpeg",
-  "/pastEvents/img14.jpeg"
-  
-  // "/image2.jpg",
-  // "/image3.jpg",
-  // "/image4.jpg",
-  // "/image5.jpg",
-  // "/image6.jpg",
-  // "/image7.jpg",
-  // "/image1.jpg",
-  // "/image2.jpg",
-  // "/image3.jpg",
-  // "/image4.jpg",
-  // "/image5.jpg",
-  // "/image6.jpg",
-  // "/image7.jpg",
+  "/PastEvents/img1.jpeg",
+  "/PastEvents/img2.jpeg",
+  "/PastEvents/img3.jpeg",
+  "/PastEvents/img4.jpeg",
+  "/PastEvents/img5.jpeg",
+  "/PastEvents/img6.jpeg",
+  "/PastEvents/img7.jpeg",
+  "/PastEvents/img8.jpeg",
+  "/PastEvents/img9.jpeg",
+  "/PastEvents/img10.jpeg",
+  "/PastEvents/img11.jpeg",
+  "/PastEvents/img12.jpeg",
+  "/PastEvents/img13.jpeg",
+  "/PastEvents/img14.jpeg",
 ];
 
 export default function PastEvents() {

@@ -2,18 +2,18 @@ import { useEffect, useRef } from "react";
 import "./MobileCorousel.css";
 
 const images = [
-  "/pastEvents/1.webp",
-  "/pastEvents/2.webp",
-  "/pastEvents/3.webp",
-  "/pastEvents/4.webp",
-  "/pastEvents/5.webp",
-  "/pastEvents/6.webp",
-  "/pastEvents/7.webp",
-  "/pastEvents/8.webp",
-  "/pastEvents/9.webp",
-  "/pastEvents/10.webp",
-  "/pastEvents/11.webp",
-  "/pastEvents/12.webp",
+  "/PastEvents/1.webp",
+  "/PastEvents/2.webp",
+  "/PastEvents/3.webp",
+  "/PastEvents/4.webp",
+  "/PastEvents/5.webp",
+  "/PastEvents/6.webp",
+  "/PastEvents/7.webp",
+  "/PastEvents/8.webp",
+  "/PastEvents/9.webp",
+  "/PastEvents/10.webp",
+  "/PastEvents/11.webp",
+  "/PastEvents/12.webp",
 ];
 
 const MobileCorousel = () => {
