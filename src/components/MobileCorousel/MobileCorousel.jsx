@@ -1,5 +1,4 @@
-'use client';
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./MobileCorousel.css";
 
 const images = [
@@ -18,10 +17,16 @@ const images = [
 ];
 
 const MobileCorousel = () => {
+  const sliderRef = useRef(null);
+
   useEffect(() => {
-    const slider = document.querySelector(".slider");
-    if (slider) {
-      let clone = slider.querySelector(".slider-items").cloneNode(true);
+    if (!sliderRef.current) return;
+
+    const slider = sliderRef.current;
+    const sliderItems = slider.querySelector(".slider-items");
+
+    if (sliderItems) {
+      let clone = sliderItems.cloneNode(true);
       clone.classList.add("clone");
       clone.ariaHidden = true;
       slider.append(clone);
@@ -45,12 +50,12 @@ const MobileCorousel = () => {
         </div>
       </div>
 
-      <div className="slider-container">
-        <div className="slider">
+      <div className="slider-container bg-black">
+        <div className="slider" ref={sliderRef}>
           <div className="slider-items">
             {images.map((img, index) => (
               <div className="item" key={`img-${index}`}>
-                <img src={img} alt="" />
+                <img src={img} alt={`Past Event ${index + 1}`} />
               </div>
             ))}
           </div>
