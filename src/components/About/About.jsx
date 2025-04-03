@@ -13,7 +13,7 @@ export default function AboutSection() {
   const { x, y } = useMousePosition()
 
   // Increase hover effect size for a more immersive magical experience
-  const size = hoverState.text ? 250 : 50
+  const size = hoverState.text ? 200 : 40
 
   return (
     <section id='about' className={`${styles.aboutSection} relative overflow-hidden`}>

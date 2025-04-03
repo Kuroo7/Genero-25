@@ -1,14 +1,13 @@
 "use client";
 import About from "@/components/About/About";
-import Break from "@/components/Break";
 import Faq from "@/components/Faq/Faq";
 import Hero from "@/components/Hero/Hero";
 // import LinkButton from "@/components/LinkButton/LinkButton";
 import PastEvents from "../components/PastEvents/PastEvents";
 
+import MobileCorousel from "@/components/MobileCorousel/MobileCorousel";
 import ScratchTicket from "@/components/ScratchTicket";
 import TextMask from "@/components/TextMask/TextMask";
-import Ticket from "@/components/Ticket/Ticket";
 import ZoomParallax from "@/components/ZoomParallax/page";
 import { useScroll } from "framer-motion";
 import Lenis from "lenis";
@@ -41,7 +40,8 @@ export default function Home() {
       </div>  
       {/* <Break/> */}
       <ZoomParallax />
-      <PastEvents />      
+      <PastEvents />   
+      <MobileCorousel/>   
       <TextMask />
       <Faq />
       <ScratchTicket/>

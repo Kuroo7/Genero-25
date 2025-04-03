@@ -1,0 +1,73 @@
+/* Base styles for mobile only */
+.mobile-only-view {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .bg-container {
+    background-image: url('/PastEventsBg1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 160px;
+    flex-shrink: 0;
+  }
+  
+  .slider-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+  
+  .slider {
+    width: 85%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: scroll 40s linear infinite;
+  }
+  
+  .item {
+    width: 100%;
+    min-height: 180px; /* Increased height */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain; /* Changed from cover to contain */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(calc(-100% - 15px)); /* Accounts for gap */
+    }
+  }
+  
+  /* Hide on desktop */
+  @media (min-width: 768px) {
+    .mobile-only-view {
+      display: none;
+    }
+  }

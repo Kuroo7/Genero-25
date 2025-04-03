@@ -46,3 +46,8 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.main {
+    @media (max-width: 767px) {  // md breakpoint is typically 768px
+      display: none;
+    }
+  }
