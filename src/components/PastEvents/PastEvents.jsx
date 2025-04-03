@@ -6,20 +6,20 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './PastEvents.module.scss';
 
 const images = [
-  "/PastEvents/img1.jpeg",
-  "/PastEvents/img2.jpeg",
-  "/PastEvents/img3.jpeg",
-  "/PastEvents/img4.jpeg",
-  "/PastEvents/img5.jpeg",
-  "/PastEvents/img6.jpeg",
-  "/PastEvents/img7.jpeg",
-  "/PastEvents/img8.jpeg",
-  "/PastEvents/img9.jpeg",
-  "/PastEvents/img10.jpeg",
-  "/PastEvents/img11.jpeg",
-  "/PastEvents/img12.jpeg",
-  "/PastEvents/img13.jpeg",
-  "/PastEvents/img14.jpeg",
+  "/PastEvents/1.webp",
+  "/PastEvents/2.webp",
+  "/PastEvents/3.webp",
+  "/PastEvents/4.webp",
+  "/PastEvents/5.webp",
+  "/PastEvents/6.webp",
+  "/PastEvents/7.webp",
+  "/PastEvents/8.webp",
+  "/PastEvents/9.webp",
+  "/PastEvents/10.webp",
+  "/PastEvents/11.webp",
+  "/PastEvents/12.webp",
+  "/PastEvents/1.webp",
+  "/PastEvents/2.webp",
 ];
 
 export default function PastEvents() {
