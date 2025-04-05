@@ -107,6 +107,7 @@
     div {
       h3 {
         font-weight: bold;
+        font-family: 'CustomFont', sans-serif;
       }
     }
   }
@@ -130,3 +131,13 @@
     }
   }
 }
+
+// @keyframes glow {
+//   0% { text-shadow: 0 0 5px #ffc107, 0 0 10px #ff5722; }
+//   50% { text-shadow: 0 0 20px #ffc107, 0 0 30px #ff5722; }
+//   100% { text-shadow: 0 0 5px #ffc107, 0 0 10px #ff5722; }
+// }
+
+// .glowText {
+//   animation: glow 2s ease-in-out infinite;
+// }

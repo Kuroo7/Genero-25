@@ -12,7 +12,8 @@ const faqs = [
       "The theme of Genero'25 is 'The Sacred Legacy'. It symbolizes hidden knowledge, forgotten innovations, and the unseen impact of technology. It challenges participants to uncover mysteries, push boundaries, and create their own lasting legacy.",
   },
   {
-    question: "Can students from other colleges also participate in the events?",
+    question:
+      "Can students from other colleges also participate in the events?",
     answer: "Yes, students from other colleges can participate in Genero'25.",
   },
   {
@@ -44,13 +45,17 @@ const FAQItem = ({ faq, isOpen, onClick, pathRef }) => {
   }, [isOpen]);
 
   return (
-    <div  className="w-full">
+    <div className="w-full">
       <div
         onClick={onClick}
         className="cursor-pointer text-white text-lg font-semibold flex justify-between items-center py-4"
       >
         <span>{faq.question}</span>
-        <ChevronDown className={`w-6 h-6 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`} />
+        <ChevronDown
+          className={`w-6 h-6 transition-transform duration-300 ${
+            isOpen ? "rotate-180" : "rotate-0"
+          }`}
+        />
       </div>
       <div
         ref={contentRef}
@@ -60,7 +65,12 @@ const FAQItem = ({ faq, isOpen, onClick, pathRef }) => {
         {faq.answer}
       </div>
       <div className="svgContainer w-full">
-        <svg width="100%" height="50" viewBox="0 0 480 100" preserveAspectRatio="none">
+        <svg
+          width="100%"
+          height="50"
+          viewBox="0 0 480 100"
+          preserveAspectRatio="none"
+        >
           <path
             ref={pathRef}
             d="M 0 50 Q 240 50 480 50"
@@ -90,10 +100,18 @@ const Faq = () => {
         let x = event.clientX - rect.left;
         let y = event.clientY - rect.top;
         let newPath = `M 0 50 Q ${x} ${y} 480 50`;
-        gsap.to(pathRef, { attr: { d: newPath }, duration: 0.2, ease: "power3.out" });
+        gsap.to(pathRef, {
+          attr: { d: newPath },
+          duration: 0.2,
+          ease: "power3.out",
+        });
       };
       const handleMouseLeave = () => {
-        gsap.to(pathRef, { attr: { d: "M 0 50 Q 240 50 480 50" }, duration: 1.5, ease: "elastic.out(1,0.2)" });
+        gsap.to(pathRef, {
+          attr: { d: "M 0 50 Q 240 50 480 50" },
+          duration: 1.5,
+          ease: "elastic.out(1,0.2)",
+        });
       };
       pathRef.parentNode.addEventListener("mousemove", handleMouseMove);
       pathRef.parentNode.addEventListener("mouseleave", handleMouseLeave);
@@ -106,11 +124,14 @@ const Faq = () => {
   }, []);
 
   return (
-    <div id="faq" className="bg-black min-h-screen w-screen flex flex-col justify-center items-center shadow-lg">
-      <div className="w-full max-w-4xl px-4 sm:px-6 md:px-8 mt-10">
-        <h2 className="text-4xl font-extrabold text-center mb-8 text-white">
+    <div
+      id="faq"
+      className="bg-black min-h-screen w-screen flex flex-col justify-center items-center shadow-lg"
+    >
+      <div className="w-full max-w-4xl px-2 sm:px-6 md:px-8 mt-7">
+        <h1 className="text-center mb-8" style={{ fontFamily: "MedievalSharp", fontSize: "3rem", fontWeight: "bold",}}>
           Frequently Asked Questions
-        </h2>
+        </h1>
         {faqs.map((faq, index) => (
           <FAQItem
             key={index}

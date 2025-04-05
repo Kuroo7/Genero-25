@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+// import {Medieval} from "public/fonts/RansiteMedieval.otf";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 // import { Tabs } from "@/components/Tabs";

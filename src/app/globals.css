@@ -7,8 +7,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,12 +20,19 @@ html {
 }
 
 @font-face {
-  font-family: 'CustomFont';  /* Replace with your font name */
+  font-family: 'CustomFont';  
+  /* Replace with your font name */
   src: url('/fonts/Stencilum-ExtraLoose.ttf') format('truetype'),
        url('/fonts/Stencilum-Loose.ttf') format('truetype'),
        url('/fonts/Stencilum-Regular.ttf') format('truetype'),
        url('/fonts/Stencilum-UltraLoose.ttf') format('truetype'),
        url('/fonts/Stencilum-VF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MedievalSharp';
+  src: url('/fonts/MedievalSharp.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -44,6 +49,7 @@ body {
   color: var(--foreground);
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: 'CustomFont', sans-serif;
+  /* font-family: 'RansiteMedieval', serif; */
  /* overflow-x: hidden; */
  width: 100vw;
 }
@@ -71,6 +77,9 @@ body {
   cursor: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'MedievalSharp', cursive;
+}
 
 .custom-cursor {
   position: fixed;

@@ -58,9 +58,20 @@ export default function ZoomParallax() {
 
   return (
     // <div id="past" className="bg-gradient-to-b from-[#1a001a] via-[#4b0082] to-[#d8b4fe] ">
-    <div id="past" className="items-center justify-center bg-[url('/PurpleBg2.png')] bg-contain bg-no-repeat bg-top bg-center">
+    <div
+      id="past"
+      className="items-center justify-center bg-[url('/PurpleBg2.png')] bg-contain bg-no-repeat bg-top bg-center"
+    >
       <div className="flex h-40  items-center justify-center">
-        <h1 className="md:text-9xl text-5xl uppercase font-bold text-white ">
+        <h1
+          className="md:text-9xl text-5xl uppercase font-bold z-10 text-center px-4"
+          style={{
+            background: "linear-gradient(to right, #ffffff,rgb(232, 182, 16))", // white to gold
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            textShadow: "1px 1px 5px rgba(255, 244, 202, 0.7)", // bold shadow for glow
+          }}
+        >
           Past Genero
         </h1>
       </div>
@@ -70,7 +81,7 @@ export default function ZoomParallax() {
             return (
               <motion.div key={index} style={{ scale }} className={styles.el}>
                 <div className={styles.imageContainer}>
-                <h1 className="relative top-0 z-10 ">{}</h1>
+                  <h1 className="relative top-0 z-10 ">{}</h1>
                   <Image src={src} fill alt="image" placeholder="blur" />
                 </div>
               </motion.div>
