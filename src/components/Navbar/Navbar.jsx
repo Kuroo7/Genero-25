@@ -26,6 +26,8 @@ const navItems = [
   { name: "FAQ", href: "/#faq", icon: HelpCircle },
   { name: "SCHEDULE", href: "/schedule", icon: Clock },
   { name: "TEAM", href: "/team", icon: Users },
+  { name: "SPONSORS", href: "/sponsors", icon: Users },
+
   { name: "GET TICKET", href: "/#ticket", icon: Ticket },
 ];
 
@@ -55,7 +57,11 @@ export default function Navbar() {
           className="absolute left-16 top-1 z-50"
         >
           <Link href="/">
-            <img src="/logo.png" alt="Logo" className="w-16 h-16 cursor-pointer" />
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="w-16 h-16 cursor-pointer"
+            />
           </Link>
         </motion.div>
 
@@ -63,55 +69,60 @@ export default function Navbar() {
         <AnimatePresence>
           {isVisible && (
             <>
-            <motion.nav
-            
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            
-              exit={{ y: -100 }}
-              transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="w-full bg-transparent backdrop-blur-md border-b border-yellow-400/10"
-            >
-              <div className="max-w-7xl mx-auto px-4">
-                <div className="flex items-center justify-evenly h-16 w-full pl-20">
-                  {navItems.map((item) => {
-                    const Icon = item.icon;
-                    const isActive = pathname === item.href; // Check if current page matches
-                    const isGetTicket = item.name.toLowerCase() === "get ticket";
+              <motion.nav
+                initial={{ y: -100 }}
+                animate={{ y: 0 }}
+                exit={{ y: -100 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                className="w-full bg-transparent backdrop-blur-md border-b border-yellow-400/10"
+              >
+                <div className="max-w-7xl mx-auto px-4">
+                  <div className="flex items-center justify-evenly h-16 w-full pl-20">
+                    {navItems.map((item) => {
+                      const Icon = item.icon;
+                      const isActive = pathname === item.href; // Check if current page matches
+                      const isGetTicket =
+                        item.name.toLowerCase() === "get ticket";
 
-                    return (
-                      <Link key={item.name} href={item.href} scroll={true} legacyBehavior>
-                        <motion.a
-                          whileHover={{ scale: 1.05 }}
-                          className={`group relative flex items-center px-4 py-2 rounded-lg transition duration-300 ${
-                            isGetTicket
-                              ? "bg-yellow-400 text-black shadow-lg shadow-yellow-500/50 hover:bg-yellow-300"
-                              : isActive
-                              ? "bg-yellow-400/10 text-yellow-400 shadow-md shadow-yellow-400/20"
-                              : "text-gray-300 hover:text-yellow-400"
-                          }`}
+                      return (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          scroll={true}
+                          legacyBehavior
                         >
-                          <div className="relative z-10 flex items-center space-x-2">
-                            <Icon
-                              className={`w-5 h-5 ${
-                                isGetTicket
-                                  ? "text-black"
-                                  : isActive
-                                  ? "text-yellow-400"
-                                  : "text-gray-400"
-                              }`}
-                            />
-                            <span className="text-sm font-medium">{item.name}</span>
-                          </div>
-                        </motion.a>
-                      </Link>
-                    );
-                  })}
+                          <motion.a
+                            whileHover={{ scale: 1.05 }}
+                            className={`group relative flex items-center px-4 py-2 rounded-lg transition duration-300 ${
+                              isGetTicket
+                                ? "bg-yellow-400 text-black shadow-lg shadow-yellow-500/50 hover:bg-yellow-300"
+                                : isActive
+                                ? "bg-yellow-400/10 text-yellow-400 shadow-md shadow-yellow-400/20"
+                                : "text-gray-300 hover:text-yellow-400"
+                            }`}
+                          >
+                            <div className="relative z-10 flex items-center space-x-2">
+                              <Icon
+                                className={`w-5 h-5 ${
+                                  isGetTicket
+                                    ? "text-black"
+                                    : isActive
+                                    ? "text-yellow-400"
+                                    : "text-gray-400"
+                                }`}
+                              />
+                              <span className="text-sm font-medium">
+                                {item.name}
+                              </span>
+                            </div>
+                          </motion.a>
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            </motion.nav>
+              </motion.nav>
             </>
-
           )}
         </AnimatePresence>
       </div>
