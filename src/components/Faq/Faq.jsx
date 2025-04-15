@@ -50,7 +50,7 @@ const FAQItem = ({ faq, isOpen, onClick, pathRef }) => {
         onClick={onClick}
         className="cursor-pointer text-white text-lg font-semibold flex justify-between items-center py-4"
       >
-        <span>{faq.question}</span>
+        <span className="text-2xl tracking-wider">{faq.question}</span>
         <ChevronDown
           className={`w-6 h-6 transition-transform duration-300 ${
             isOpen ? "rotate-180" : "rotate-0"
@@ -129,7 +129,13 @@ const Faq = () => {
       className="bg-black min-h-screen w-screen flex flex-col justify-center items-center shadow-lg"
     >
       <div className="w-full max-w-4xl px-2 sm:px-6 md:px-8 mt-7">
-        <h1 className="text-center mb-8" style={{ fontFamily: "MedievalSharp", fontSize: "3rem", fontWeight: "bold",}}>
+        <h1 className="text-center mb-8" style={{ fontFamily: "MedievalSharp", fontSize: "3rem", fontWeight: "bold",
+          background: "linear-gradient(90deg, white 0%,rgb(255, 191, 0) 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          textShadow: "2px 2px 5px rgba(255, 255, 255, 0.5)", // subtle glow/contrast
+        }}
+        >
           Frequently Asked Questions
         </h1>
         {faqs.map((faq, index) => (

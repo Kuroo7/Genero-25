@@ -75,7 +75,7 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-black text-white py-6 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#ff00ff_0,rgba(0,0,0,0.9)_70%)] opacity-20 z-0" />
+      <div className="absolute inset-0 " />
 
       {particles.map((pos, i) => (
         <motion.div
@@ -87,9 +87,8 @@ const Footer = () => {
         />
       ))}
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Genero'25 at the Top */}
-        <div className="text-center mb-6">
+      <div className="max-w-7xl mx-auto relative z-10 ">
+        {/* <div className="text-center mb-6">
           <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-purple leading-tight"
             initial={{ opacity: 0, y: 50 }}
@@ -105,7 +104,7 @@ const Footer = () => {
           >
             Genero'25
           </motion.h1>
-        </div>
+        </div> */}
 
         {/* Grid Section */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 mb-6">
@@ -115,7 +114,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-3"
           >
-            <h3 className="text-lg sm:text-xl font-bold text-neon-pink uppercase tracking-wider animate-pulse">
+            <h3 className="text-lg sm:text-xl font-bold text-neon-pink uppercase tracking-wider ">
               Links
             </h3>
             <div className="flex flex-col gap-2">
@@ -124,11 +123,10 @@ const Footer = () => {
                   key={index}
                   custom={index}
                   variants={linkVariants}
-                  whileHover="hover"
                 >
                   <Link
                     href={link.path}
-                    className="text-gray-300 text-sm sm:text-base hover:text-neon-cyan transition-all duration-300"
+                    className="text-gray-300 text-sm sm:text-base "
                   >
                     {link.label}
                   </Link>
@@ -143,7 +141,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-3"
           >
-            <h3 className="text-lg sm:text-xl font-bold text-neon-cyan uppercase tracking-wider animate-pulse">
+            <h3 className="text-lg sm:text-xl font-bold text-neon-cyan uppercase tracking-wider ">
               Connect
             </h3>
             <div className="flex gap-4 sm:gap-6">
@@ -182,7 +180,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-3"
           >
-            <h3 className="text-lg sm:text-xl font-bold text-neon-purple uppercase tracking-wider animate-pulse">
+            <h3 className="text-lg sm:text-xl font-bold text-neon-purple uppercase tracking-wider ">
               Reach Us
             </h3>
             <div className="flex flex-col gap-2 text-gray-300 text-sm sm:text-base">
@@ -214,7 +212,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-3"
           >
-            <h3 className="text-lg sm:text-xl font-bold text-neon-pink uppercase tracking-wider animate-pulse">
+            <h3 className="text-lg sm:text-xl font-bold text-neon-pink uppercase tracking-wider ">
               Location
             </h3>
             <div className="w-[160px] sm:w-[240px] xl:w-[260px] h-32 sm:h-36 md:h-40 rounded-md overflow-hidden">

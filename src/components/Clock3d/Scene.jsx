@@ -3,7 +3,7 @@
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 import { Suspense } from "react";
-import { OrbitControls } from "@react-three/drei";
+import {  OrbitControls } from "@react-three/drei";
 
 const Scene = () => {
   return (
@@ -15,8 +15,12 @@ const Scene = () => {
     >
       <ambientLight position={[-5, 5, -5]} intensity={.2} />
       <Suspense fallback={null}>
+
         <Model />
+
         <OrbitControls 
+        enableZoom={false}
+        enablePan={false}
           minDistance={100} // Restrict zoom-in
           maxDistance={100}
           target={[0, 0, 0]} // Ensure camera looks at the model's center

@@ -12,6 +12,8 @@ import ZoomParallax from "@/components/ZoomParallax/page";
 import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
+import DistortionEffect from "@/components/DistortionEffect/DistortionEffect";
+import { CirclePast } from "@/components/CirclePast/CirclePast";
 
 export default function Home() {
   useEffect(() => {
@@ -30,6 +32,8 @@ export default function Home() {
     offset: ["start start", "end end"],
   });
   return (
+    // <DistortionEffect/>
+   
     <div>
       <div
         ref={container}
@@ -41,6 +45,7 @@ export default function Home() {
       {/* <Break/> */}
       <ZoomParallax />
       <PastEvents />   
+      {/* <CirclePast/> */}
       <MobileCorousel/>   
       <TextMask />
       <Faq />

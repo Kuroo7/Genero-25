@@ -11,7 +11,9 @@ export default function EventDetailsPage() {
   const event = category?.events.find((ev) => ev.id === eventId);
 
   if (!event) {
-    return <h1 className="text-red-500 text-center text-2xl">Event Not Found</h1>;
+    return <h1 className="text-red-500 text-center text-2xl"
+    
+    >Event Not Found</h1>;
   }
 
   return (

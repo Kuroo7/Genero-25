@@ -20,8 +20,8 @@ import {
 const navItems = [
   { name: "HOME", href: "/", icon: BookOpen },
   { name: "ABOUT", href: "/#about", icon: Info },
-  { name: "PAST", href: "/#past", icon: History },
-  { name: "THIS YEAR", href: "/#thisyear", icon: Sparkles },
+  // { name: "PAST", href: "/#past", icon: History },
+  // { name: "THIS YEAR", href: "/#thisyear", icon: Sparkles },
   { name: "EVENTS", href: "/events", icon: CalendarDays },
   { name: "FAQ", href: "/#faq", icon: HelpCircle },
   { name: "SCHEDULE", href: "/schedule", icon: Clock },
@@ -52,10 +52,10 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="absolute left-4 top-3 z-50"
+          className="absolute left-16 top-1 z-50"
         >
           <Link href="/">
-            <img src="/logo.png" alt="Logo" className="w-10 h-10 cursor-pointer" />
+            <img src="/logo.png" alt="Logo" className="w-16 h-16 cursor-pointer" />
           </Link>
         </motion.div>
 

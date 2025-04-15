@@ -2,10 +2,10 @@ import styles from "./styles.module.scss";
 // ../../../public/PastEvents/8.webp
 // import Picture6 from "../../../public/PastEvents/8.webp";
 import Picture1 from "../../../public/History/2015.webp";
-import Picture2 from "../../../public/History/2016.webp";
+import Picture5 from "../../../public/History/2016.webp";
 import Picture3 from "../../../public/History/2017.webp";
 import Picture4 from "../../../public/History/2019.webp";
-import Picture5 from "../../../public/History/img12.webp";
+import Picture2 from "../../../public/History/img12.webp";
 import Picture6 from "../../../public/History/2023.webp";
 import Picture7 from "../../../public/History/img10.webp";
 import Image from "next/image";
@@ -60,11 +60,11 @@ export default function ZoomParallax() {
     // <div id="past" className="bg-gradient-to-b from-[#1a001a] via-[#4b0082] to-[#d8b4fe] ">
     <div
       id="past"
-      className="items-center justify-center bg-[url('/PurpleBg2.png')] bg-contain bg-no-repeat bg-top bg-center"
+      className="items-center justify-center "
     >
       <div className="flex h-40  items-center justify-center">
         <h1
-          className="md:text-9xl text-5xl uppercase font-bold z-10 text-center px-4"
+          className="md:text-6xl text-5xl uppercase font-bold z-10 text-center px-4"
           style={{
             background: "linear-gradient(to right, #ffffff,rgb(232, 182, 16))", // white to gold
             WebkitBackgroundClip: "text",

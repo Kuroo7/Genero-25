@@ -8,7 +8,7 @@ export default function EventCategoryPage() {
   const { categoryId } = useParams();
   const category = eventsData.find((cat) => cat.id === categoryId);
 
-console.log(category);
+// console.log(category);
 
 
   if (!category) {
@@ -23,7 +23,12 @@ console.log(category);
       style={{ backgroundImage: "url('/event.jpg')", backgroundSize: "cover" }}
     >
       <h1
-        style={{ textAlign: "center", marginTop: "30px" }}
+        style={{ textAlign: "center", marginTop: "30px" ,  fontFamily: "MedievalSharp",
+          background: "linear-gradient(90deg, white 0%,rgb(255, 191, 0) 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          textShadow: "2px 2px 5px rgba(255, 255, 255, 0.5)", // subtle glow/contrast
+        }}
         className="pastHead md:text-6xl uppercase font-bold text-amber-400"
       >
         {category.name}
