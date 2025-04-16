@@ -10,7 +10,7 @@ import { Fluid } from "@whatisjery/react-fluid-distortion";
 const Scene = () => {
   return (
     <Canvas
-    style={{ width: "100%", height: "100%" }} 
+      style={{ width: "100%", height: "100%" }}
       gl={{ antialias: true }}
       dpr={[1, 1.5]}
       camera={{ position: [2, 0, 10], fov: 50 }} // Camera adjusted for closer view
@@ -18,7 +18,7 @@ const Scene = () => {
       <EffectComposer>
         <Fluid fluidColor="rgba(255, 200, 0, 0.6)" />
       </EffectComposer>
-      <ambientLight intensity={1.2} />
+      <ambientLight intensity={1.5} />
       <Suspense fallback={null}>
         <Model />
         <OrbitControls

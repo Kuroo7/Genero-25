@@ -87,7 +87,7 @@ export default function Page() {
 
         {/* Call to Action */}
         <section
-          className={`text-center py-16 bg-black bg-opacity-70 rounded-3xl transition-transform duration-1000 delay-400 ${
+          className={`text-center py-16  bg-opacity-70 rounded-3xl transition-transform duration-1000 delay-400 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >

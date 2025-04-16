@@ -17,7 +17,7 @@ const Footer = () => {
     { label: "Facebook", path: "https://facebook.com", logo: "/facebook.png" },
     {
       label: "Instagram",
-      path: "https://instagram.com",
+      path: "https://www.instagram.com/genero.abesec/",
       logo: "/instagram.webp",
     },
     { label: "YouTube", path: "https://youtube.com", logo: "/youtube.png" },
@@ -119,11 +119,7 @@ const Footer = () => {
             </h3>
             <div className="flex flex-col gap-2">
               {navLinks.map((link, index) => (
-                <motion.div
-                  key={index}
-                  custom={index}
-                  variants={linkVariants}
-                >
+                <motion.div key={index} custom={index} variants={linkVariants}>
                   <Link
                     href={link.path}
                     className="text-gray-300 text-sm sm:text-base "

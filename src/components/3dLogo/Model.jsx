@@ -35,33 +35,33 @@ const Model = () => {
 
   return (
     <>
-    <Float
-      speed={4}
-      rotationIntensity={1.5}
-      floatIntensity={3}
-      floatingRange={[-0.2, 0.4]}
+      <Float
+        speed={4}
+        rotationIntensity={1.5}
+        floatIntensity={3}
+        floatingRange={[-0.2, 0.4]}
       >
-      <group rotation={[Math.PI / 2,  Math.PI / 2,0]}  ref={group}>
-        {/* Circular disc with thickness */}
-        <mesh  scale={[1.4,1.4,1.4]}>
-          <cylinderGeometry  args={[2, 2, 0.2, 32, 1, false]} /> {/* Radius 2, height 0.2, 32 segments */}
-          <meshStandardMaterial
-            map={texture}
-            side={THREE.FrontSide} // Only show front face
+        <group rotation={[Math.PI / 2, Math.PI / 2, 0]} ref={group}>
+          {/* Circular disc with thickness */}
+          <mesh scale={[1.4, 1.4, 1.4]}>
+            <cylinderGeometry args={[2, 2, 0.2, 32, 1, false]} />{" "}
+            {/* Radius 2, height 0.2, 32 segments */}
+            <meshStandardMaterial
+              map={texture}
+              side={THREE.FrontSide} // Only show front face
             />
-        </mesh>
-        {/* Mouse-driven light */}
-        <pointLight
-          ref={lightRef}
-          color="#ffcc88"
-          intensity={8}
-          distance={10}
-          decay={1}
+          </mesh>
+          {/* Mouse-driven light */}
+          <pointLight
+            ref={lightRef}
+            color="#ffcc88"
+            intensity={10}
+            distance={10}
+            decay={1}
           />
-        
-      </group>
-          </Float>
-          </>
+        </group>
+      </Float>
+    </>
   );
 };
 
