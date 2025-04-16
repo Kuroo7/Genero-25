@@ -5,15 +5,15 @@ import Hero from "@/components/Hero/Hero";
 // import LinkButton from "@/components/LinkButton/LinkButton";
 import PastEvents from "../components/PastEvents/PastEvents";
 
-import MobileCorousel from "@/components/MobileCorousel/MobileCorousel";
+// import MobileCorousel from "@/components/MobileCorousel/MobileCorousel";
 import ScratchTicket from "@/components/ScratchTicket";
 import TextMask from "@/components/TextMask/TextMask";
 import ZoomParallax from "@/components/ZoomParallax/page";
 import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
-import DistortionEffect from "@/components/DistortionEffect/DistortionEffect";
-import { CirclePast } from "@/components/CirclePast/CirclePast";
+import MobileCorousel from "@/components/mobileCorousel/page";
+import CountDown from "@/components/CountDown/page";
 
 export default function Home() {
   useEffect(() => {
@@ -44,10 +44,10 @@ export default function Home() {
       </div>  
       {/* <Break/> */}
       <ZoomParallax />
-      <PastEvents />   
-      {/* <CirclePast/> */}
-      <MobileCorousel/>   
+      <PastEvents />
+      <MobileCorousel/>      
       <TextMask />
+      <CountDown/>
       <Faq />
       <ScratchTicket/>
       {/* <Ticket /> */}

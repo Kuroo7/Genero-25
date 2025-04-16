@@ -58,8 +58,8 @@ export default function PastEvents() {
   }, []);
 
   return (
-    <main className={styles.main}>
-      <div className={styles.spacer}>
+    <main className={`${styles.main} hidden md:block`}>
+       <div className={styles.spacer} >
         <div className="flex h-40 py-10 items-center justify-center">
           <h1
             className="md:text-9xl uppercase text-5xl font-bold relative z-10 text-center"
