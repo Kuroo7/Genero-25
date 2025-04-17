@@ -17,7 +17,7 @@
 .team-card {
   height: 400px; /* Reduced from 500px for better proportions */
   width: 300px;
-  margin: 0;
+  margin: 1rem;
   box-shadow: 0 3px 5px #000;
   border-radius: 10px;
   overflow: hidden;
@@ -69,16 +69,19 @@
 @media (max-width: 1024px) {
   .grid-container {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  
   }
 }
 
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    
   }
   
   .team-card {
     height: 350px;
+    margin-right:3.5rem;
   }
 }
 
