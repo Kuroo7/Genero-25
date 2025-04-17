@@ -1,0 +1,110 @@
+/* Base styles for mobile only */
+.mobile-only-view {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: black;
+  background-blend-mode: overlay;
+  color: #FFFFF0; /* Ivory text */
+}
+
+.bg-container {
+  width: 100%;
+  min-height: 80px; /* Reduced to save space */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #4B0082, #1a1a1a); /* Deep purple to dark */
+}
+
+.header-container {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header-text {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem; /* Slightly smaller for mobile */
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.carousel-container {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top to prevent clipping */
+  padding: 10px 0;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow scrolling if needed, but should fit */
+}
+
+.carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+  width: 90%;
+  max-width: 360px; /* Slightly smaller to fit mobile screens */
+  margin: 0 auto;
+}
+
+.carousel-item {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #2a1a3a; /* Dark purple tint */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 0 6px rgba(255, 215, 0, 0.2);
+  padding: 8px;
+  border: 1px solid #FFD700; /* Gold border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 215, 0, 0.4);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 70px; /* Reduced to fit all rows */
+  object-fit: contain; /* Full image visibility */
+  display: block;
+  border-radius: 4px;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background: linear-gradient(to top, rgba(75, 0, 130, 0.7), transparent);
+  color: #FFFFF0;
+  padding: 6px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.event-number {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-shadow: 0 0 4px rgba(255, 215, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .mobile-only-view {
+    display: none;
+  }
+}
