@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import "./MobileCorousel.css";
 
 const images = [
@@ -16,29 +16,15 @@ const images = [
   "/PastEvents/12.webp",
 ];
 
-const MobileCorousel = () => {
-  const sliderRef = useRef(null);
-
-  useEffect(() => {
-    if (!sliderRef.current) return;
-
-    const slider = sliderRef.current;
-    const sliderItems = slider.querySelector(".slider-items");
-
-    if (sliderItems) {
-      let clone = sliderItems.cloneNode(true);
-      clone.classList.add("clone");
-      clone.ariaHidden = true;
-      slider.append(clone);
-    }
-  }, []);
+const MobileCarousel = () => {
+  const carouselRef = useRef(null);
 
   return (
-    <div id="mobileEventView" className="mobile-only-view h-screen w-screen">
+    <div id="mobileEventView" className="mobile-only-view">
       <div className="bg-container">
-        <div className="flex h-40 py-10 items-center justify-center">
-          <h1 
-            className="md:text-9xl text-5xl font-bold uppercase text-center"
+        <div className="header-container">
+          <h1
+            className="header-text"
             style={{
               background: "linear-gradient(90deg, white 0%, #ffbf00 100%)",
               WebkitBackgroundClip: "text",
@@ -50,19 +36,25 @@ const MobileCorousel = () => {
         </div>
       </div>
 
-      <div className="slider-container bg-black">
-        <div className="slider" ref={sliderRef}>
-          <div className="slider-items">
-            {images.map((img, index) => (
-              <div className="item" key={`img-${index}`}>
-                <img src={img} alt={`Past Event ${index + 1}`} />
-              </div>
-            ))}
-          </div>
+      <div className="carousel-container">
+        <div className="carousel" ref={carouselRef}>
+          {images.map((img, index) => (
+            <div className="carousel-item" key={`img-${index}`}>
+              <img
+                src={img}
+                alt={`Past Event ${index + 1}`}
+                loading="lazy"
+                className="carousel-image"
+              />
+              {/* <div className="image-overlay">
+                <span className="event-number">Event {index + 1}</span>
+              </div> */}
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default MobileCorousel;
+export default MobileCarousel;
