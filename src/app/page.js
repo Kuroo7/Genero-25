@@ -12,7 +12,7 @@ import ZoomParallax from "@/components/ZoomParallax/page";
 import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
-import MobileCorousel from "@/components/mobileCorousel/page";
+//import MobileCorousel from "@/components/mobileCorousel/page";
 import CountDown from "@/components/CountDown/page";
 
 export default function Home() {
