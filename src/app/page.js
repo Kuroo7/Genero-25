@@ -5,7 +5,7 @@ import Hero from "@/components/Hero/Hero";
 // import LinkButton from "@/components/LinkButton/LinkButton";
 import PastEvents from "../components/PastEvents/PastEvents";
 
-// import MobileCorousel from "@/components/MobileCorousel/MobileCorousel";
+import MobileCorousel from "@/components/MobileCorousel/MobileCorousel";
 import ScratchTicket from "@/components/ScratchTicket";
 import TextMask from "@/components/TextMask/TextMask";
 import ZoomParallax from "@/components/ZoomParallax/page";
