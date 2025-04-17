@@ -10,7 +10,7 @@ const menu = {
   open: {
     width: "480px",
     height: "650px",
-    top: "-25px",
+    top: "-35px",
     right: "-90px",
     transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },
   },
@@ -53,7 +53,15 @@ export default function Index() {
           animate={isActive ? "open" : "closed"}
           initial="closed"
         >
-          <AnimatePresence>{isActive && <NavItems />}</AnimatePresence>
+          <AnimatePresence>
+            {isActive && (
+              <NavItems
+                toggleMenu={() => {
+                  setIsActive(!isActive);
+                }}
+              />
+            )}
+          </AnimatePresence>
         </motion.div>
         <Button
           isActive={isActive}

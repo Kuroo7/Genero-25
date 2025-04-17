@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import { FiLock } from "react-icons/fi";
+import { LuTicket } from "react-icons/lu";
 import { motion } from "framer-motion";
 
 const BuyTicketButton = () => {
@@ -64,10 +64,10 @@ const EncryptButton = () => {
       }}
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
-      className="group relative overflow-hidden rounded-lg border-[1px] border-neutral-500 bg-amber-400 px-4 py-2 font-mono font-medium uppercase text-black transition-colors hover:text-indigo-400"
+      className="group relative overflow-hidden rounded-lg border-[1px] border-neutral-500 bg-amber-400 px-4 py-2 font-mono font-medium uppercase text-black transition-colors "
     >
-      <div className="relative md:w-40 z-10 flex items-center gap-2">
-        <FiLock />
+      <div className="relative  z-10 flex items-center gap-2">
+        <LuTicket className="text-xl" />
         <span>{text}</span>
       </div>
       <motion.span
