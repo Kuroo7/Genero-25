@@ -8,8 +8,7 @@ export default function EventCategoryPage() {
   const { categoryId } = useParams();
   const category = eventsData.find((cat) => cat.id === categoryId);
 
-// console.log(category);
-
+  // console.log(category);
 
   if (!category) {
     return (
@@ -19,31 +18,35 @@ export default function EventCategoryPage() {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center py-10 px-4"
-      style={{ backgroundImage: "url('/event.jpg')", backgroundSize: "cover" }}
+      className="min-h-screen flex flex-col items-center py-10 px-4 pt-20"
+      style={{backgroundImage: "url('/event.jpg')", backgroundSize: "cover" }}
     >
       <h1
-        style={{ textAlign: "center", marginTop: "30px" ,  fontFamily: "MedievalSharp",
+        style={{
+          textAlign: "center",
+          marginTop: "30px",
+          fontFamily: "MedievalSharp",
           background: "linear-gradient(90deg, white 0%,rgb(255, 191, 0) 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           textShadow: "2px 2px 5px rgba(255, 255, 255, 0.5)", // subtle glow/contrast
         }}
-        className="pastHead md:text-6xl uppercase font-bold text-amber-400"
+        className="pastHead text-4xl md:text-6xl uppercase font-bold text-amber-400"
       >
         {category.name}
       </h1>
-      <div className="w-full max-w-6xl mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
-  {category.events.map((card, index) => (
-    <EventsCard
-      key={card.id}
-      card={card}
-      index={index}
-      id={category.id}
-    />
-  ))}
-</div>
-
+      <div 
+        className="flex w-full max-w-6xl mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6"
+        style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+        {category.events.map((card, index) => (
+          <EventsCard
+            key={card.id}
+            card={card}
+            index={index}
+            id={category.id}
+          />
+        ))}
+      </div>
     </div>
     // <div className="p-6">
     //   <h1 className="text-3xl font-bold mb-4">{category.name}</h1>

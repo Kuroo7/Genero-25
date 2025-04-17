@@ -5,7 +5,7 @@ import EventCard from "@/components/Events/EventCard.jsx";
 export default function EventsPage() {
   return (
     <div className="p-6 md:py-20">
-      <h1 className="text-5xl text-center font-bold mb-4"
+      <h1 className="text-5xl text-center font-bold mb-4 mt-5"
       style={{ fontFamily: "MedievalSharp",
         background: "linear-gradient(90deg, white 0%,rgb(255, 191, 0) 100%)",
         WebkitBackgroundClip: "text",
