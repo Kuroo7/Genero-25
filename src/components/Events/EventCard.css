@@ -15,54 +15,74 @@
 }
 
 .team-card {
-  height: 400px; /* Reduced from 500px for better proportions */
-  width: 300px;
-  margin: 1rem;
-  box-shadow: 0 3px 5px #000;
+  height: 400px;
+  width: 250px;
+  margin: 1rem .1rem;
+  /* box-shadow: 0 3px 5px #000; */
   border-radius: 10px;
-  overflow: hidden;
   text-align: center;
-  background-color: #222;
-  transition: transform 0.3s ease;
+  /* transition: transform 0.5s ease; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("./innerCard.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: 
+    drop-shadow(0 0 10px #ffb30058);
 }
+
+/* .team-card:hover {
+  transform: translateY(-5px);
+} */
+
+/* .bg-img1 {
+  transition: 0.5s;
+  height: auto;
+  overflow: hidden;
+  transform: translateY(-5px);
+} */
 
 .team-card:hover {
-  transform: translateY(-5px);
-}
-
-.bg-img1 {
-  transition: 0.5s;
-  height: 200px;
-  overflow: hidden;
-}
-
-.team-card:hover .bg-img1 {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  filter: 
+    drop-shadow(0 0 2px #ffc40080)
+    drop-shadow(0 0 20px #ffb30058);
+  transition: all .3s ease-in-out;
 }
 
 .info1 {
-  margin-top: -120px;
   color: white;
   position: relative;
   z-index: 2;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
-  height: 120px;
+  padding: 10px;
+  width: 160px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 
-.bg-img1 img {
+/* .bg-img1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
 .info1 h2 {
   margin: 0;
   font-size: 1.5rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-align: center;
+  color: #ffffff;
+  text-shadow:
+    0 0 10px #000000,  
+    0 0 12px #00e0ff,   
+    0 0 20px #00bfff,
+    0 0 30px #0099ff,
+    0 0 50px #0066ff,
+    0 0 5px #ffb300,
+    0 0 10px #ffb300;
 }
 
 /* Responsive adjustments */
@@ -78,10 +98,17 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     
   }
+  .info1 h2{
+    font-size: 1.3rem;
+  }
+  .info1 {
+    width: 130px;
+  }
   
   .team-card {
     height: 350px;
-    margin-right:3.5rem;
+    width: 200px;
+    margin: auto 1rem;
   }
 }
 
