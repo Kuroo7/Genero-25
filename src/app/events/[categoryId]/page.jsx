@@ -3,7 +3,6 @@ import { useParams } from "next/navigation";
 import { eventsData } from "../../../data/eventData.js";
 import Link from "next/link";
 import EventsCard from "@/components/Events/EventsCard.jsx";
-import "../../../components/Events/EventCard.css";
 
 export default function EventCategoryPage() {
   const { categoryId } = useParams();
@@ -20,7 +19,7 @@ export default function EventCategoryPage() {
   return (
     <div
       className="min-h-screen flex flex-col items-center py-10 px-4 pt-20"
-      style={{backgroundImage: "url('/event.jpg')", backgroundSize: "cover" }}
+      style={{ backgroundImage: "url('/event.jpg')", backgroundSize: "cover" }}
     >
       <h1
         style={{
@@ -36,12 +35,17 @@ export default function EventCategoryPage() {
       >
         {category.name}
       </h1>
-      <div 
+      <div
         className="flex w-full max-w-6xl mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6"
-        style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center"}}>
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         {category.events.map((card, index) => (
           <EventsCard
-            className="innerCard"
             key={card.id}
             card={card}
             index={index}
