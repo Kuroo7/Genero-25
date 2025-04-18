@@ -17,10 +17,10 @@ export default function AboutSection() {
             >
               About Genero
             </h1>
-            <p className="text-gray-300 text-3xl pt-16">
+            <p>
               🌀 Genero is where the pulse of ABES Engineering College beats the loudest. A carnival of colors, music, and talent, where **every heartbeat syncs to the rhythm of limitless possibilities**. This milestone **25th edition** is set to redefine celebrations!
             </p>
-            <div className={styles.stats + " pt-16"}>
+            <div className={styles.stats}>
               <div>
                 <h3 className="font-bold text-yellow-300 animate-pulse">10+<br/>Editions</h3>
               </div>

@@ -5,23 +5,22 @@
   overflow: hidden;
   margin-top:0;
 
-
   .body{
     background: black;
     // background-image: url("/PurpleBg1.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 65px;
+    // background-position: top center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // padding-top: 65px;
   }
 
   .mask, .body {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
     color: white;
     font-size: 1.2rem;
     line-height: 1.4;
@@ -32,7 +31,9 @@
       max-width: 95%;
       // margin: 0 auto;
       // padding: 20px 0;
-      // font-size: 1.2rem;
+      font-size: 1.7rem;
+      color: #d1d5db;
+      // padding-top: 5rem;
     }
 
     span {
@@ -44,6 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 90%;
     height: 100%;
     padding: 2rem;
@@ -61,6 +63,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    gap: 3rem;
   }
 
   .imageContainer {
@@ -91,7 +94,7 @@
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -113,22 +116,122 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     .maskContent, .bodyContent {
       padding: 1.5rem;
     }
 
-    .imageContainer {
-      height: 200px;
+    // .imageContainer {
+    //   height: 200px;
+    // }
+    h1 {
+      font-size: 2.5rem;
     }
 
-    h1 {
-      font-size: 2rem;
+    .body p{
+      font-size: 1.5rem;
     }
 
     .stats {
-      flex-direction: column;
+      flex-direction: row;
+      gap: 4rem;
+      font-size: 1.6rem;
+    }
+  }
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    .body p{
+      font-size: 1.4rem;
+    }
+
+    .stats {
+      gap: 3rem;
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2.3rem;
+    }
+
+    .body p{
+      font-size: 1.2rem;
+    }
+
+    .stats {
+      gap: 2.7rem;
+      font-size: 1.25rem;
+    }
+  }
+  @media (max-width: 380px) {
+    h1 {
+      font-size: 2.1rem;    
+    }
+
+    .body p{
+      font-size: 1.1rem;
+    }
+
+    .stats {
+      gap: 2.2rem;
+      font-size: 1.15rem;
+    }
+  }
+  @media (max-width: 350px) {
+    h1 {
+      font-size: 2rem;    
+    }
+
+    .body p{
+      font-size: 1.1rem;
+    }
+
+    .stats {
+      gap: 2rem;
+      font-size: 1.1rem;
+    }
+    .textContent {
+      gap: 2rem;
+    }
+  }
+  @media
+   (max-width: 280px) {
+    h1 {
+      font-size: 1.7rem;    
+    }
+
+    .body p{
+      // max-width: 80%;
+      font-size: 1rem;
+    }
+
+    .stats {
+      gap: 2rem;
+      font-size: .8rem;
+    }
+    .textContent {
+      gap: 2rem;
+    }
+  }
+  @media (max-width: 240px) {
+    h1 {
+      font-size: 1.5rem;    
+    }
+
+    .body p{
+      // max-width: 80%;
+      font-size: .95rem;
+    }
+
+    .stats {
       gap: 1rem;
+      font-size: .9rem;
+    }
+    .textContent {
+      gap: 2rem;
     }
   }
 }
