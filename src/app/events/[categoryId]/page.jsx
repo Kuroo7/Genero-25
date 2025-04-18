@@ -3,6 +3,7 @@ import { useParams } from "next/navigation";
 import { eventsData } from "../../../data/eventData.js";
 import Link from "next/link";
 import EventsCard from "@/components/Events/EventsCard.jsx";
+import "../../../components/Events/EventCard.css";
 
 export default function EventCategoryPage() {
   const { categoryId } = useParams();
@@ -24,7 +25,7 @@ export default function EventCategoryPage() {
       <h1
         style={{
           textAlign: "center",
-          marginTop: "30px",
+          marginTop: "10px",
           fontFamily: "MedievalSharp",
           background: "linear-gradient(90deg, white 0%,rgb(255, 191, 0) 100%)",
           WebkitBackgroundClip: "text",
@@ -37,9 +38,10 @@ export default function EventCategoryPage() {
       </h1>
       <div 
         className="flex w-full max-w-6xl mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6"
-        style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+        style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center"}}>
         {category.events.map((card, index) => (
           <EventsCard
+            className="innerCard"
             key={card.id}
             card={card}
             index={index}

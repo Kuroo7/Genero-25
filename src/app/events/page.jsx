@@ -12,7 +12,7 @@ export default function EventsPage() {
         WebkitTextFillColor: "transparent",
         textShadow: "2px 2px 5px rgba(255, 255, 255, 0.5)", // subtle glow/contrast
       }}>Events</h1>
-      <div className="max-w-[80vw] min-h[70vh] m-auto flex justify-around p-2.5 flex-wrap">
+      <div className="max-w-[90vw] min-h[70vh] m-auto flex justify-around flex-wrap">
         {eventsData.map((category) => (
             <EventCard
               key={category.id}
