@@ -84,7 +84,7 @@ export default function CountdownTimer() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black to-gray-900 py-12 px-4 sm:px-6 lg:px-8 overflow-hidden relative flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-black py-12 px-4 sm:px-6 lg:px-8 overflow-hidden relative flex flex-col items-center justify-center">
       <motion.div
         className="absolute inset-0 pointer-events-none"
         animate={{
@@ -156,7 +156,7 @@ export default function CountdownTimer() {
             </motion.h1>
             <motion.div
               variants={countdownVariants}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 justify-center relative"
+              className="flex flex-row gap-4 md:grid md:grid-cols-4 md:gap-8 justify-center relative"
             >
               {['days', 'hours', 'minutes', 'seconds'].map((unit, index) => (
                 <motion.div
@@ -166,7 +166,7 @@ export default function CountdownTimer() {
                   className="flex flex-col items-center relative"
                 >
                   <motion.span
-                    className="text-5xl md:text-6xl font-bold tabular-nums text-yellow-400 relative"
+                    className="text-4xl md:text-6xl font-bold tabular-nums text-yellow-400 relative"
                     animate={{
                       y: [0, -5, 0],
                       color: ["#FFD700", "#FFFF00", "#FFD700"],
@@ -187,7 +187,7 @@ export default function CountdownTimer() {
                       style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
                     />
                   </motion.span>
-                  <span className="text-lg md:text-xl text-yellow-300/80 capitalize mt-2">{unit}</span>
+                  <span className="text-base md:text-xl text-yellow-300/80 capitalize mt-2">{unit}</span>
                 </motion.div>
               ))}
             </motion.div>

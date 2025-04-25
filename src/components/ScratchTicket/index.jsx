@@ -24,13 +24,21 @@ export default function TicketSection() {
         <div className="flex items-center justify-around mx-auto max-w-xs w-full mb-8">
           <button
             onClick={() => setSection(0)}
-            className={`${section === 0 ? "bg-amber-500 text-black" : "border border-amber-500 text-amber-500"} rounded px-3 py-1 cursor-pointer transition-colors font-medium`}
+            className={`${
+              section === 0
+                ? "bg-amber-500 text-black"
+                : "border border-amber-500 text-amber-500"
+            } rounded px-3 py-1 cursor-pointer transition-colors font-medium`}
           >
             Ticket
           </button>
           <button
             onClick={() => setSection(1)}
-            className={`${section === 1 ? "bg-amber-500 text-black" : "border border-amber-500 text-amber-500"} rounded px-3 py-1 cursor-pointer transition-colors font-medium`}
+            className={`${
+              section === 1
+                ? "bg-amber-500 text-black"
+                : "border border-amber-500 text-amber-500"
+            } rounded px-3 py-1 cursor-pointer transition-colors font-medium`}
           >
             Rules
           </button>
@@ -54,13 +62,13 @@ export default function TicketSection() {
                   height={300}
                   minScratchPercentage={15}
                   className="mx-auto w-full max-w-[900px]"
-                  gradientColors={["#8B5A2B", "#B88A5D", "#8B5A2B"]} // Brown/gold gradient for sacred theme
+                  gradientColors={["#B88A5D", "#FFCA28", "#B88A5D"]} // Brown/gold gradient for sacred theme
                   onScratchComplete={() => setIsScratched(true)}
                 >
                   <TicketContent qr1={qr1} qr2={qr2} />
                 </ScratchToReveal>
               </div>
-              
+
               {/* Mobile view without scratch effect */}
               <div className="md:hidden w-full">
                 <TicketContent qr1={qr1} qr2={qr2} />
@@ -68,31 +76,48 @@ export default function TicketSection() {
             </>
           ) : (
             <div className="w-full max-w-2xl mx-auto bg-gray-800/30 backdrop-blur-sm border border-amber-500/30 rounded-xl p-6 md:p-8 shadow-xl shadow-amber-900/20">
-              <p className="text-amber-200 mb-4 font-medium">Following are the rules to be followed by all the participants:</p>
+              <p className="text-amber-200 mb-4 font-medium">
+                Following are the rules to be followed by all the participants:
+              </p>
               <ol className="text-amber-100 space-y-3">
                 <li className="flex items-start">
                   <span className="text-amber-500 mr-2">•</span>
-                  <span>Treat the campus with respect and care, and avoid littering or damaging property.</span>
+                  <span>
+                    Treat the campus with respect and care, and avoid littering
+                    or damaging property.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-500 mr-2">•</span>
-                  <span>Arrive on time for the event to avoid missing out on any activities or performances.</span>
+                  <span>
+                    Arrive on time for the event to avoid missing out on any
+                    activities or performances.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-500 mr-2">•</span>
-                  <span>Follow safety instructions provided by the organizers.</span>
+                  <span>
+                    Follow safety instructions provided by the organizers.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-500 mr-2">•</span>
-                  <span>Show respect and courtesy towards fellow attendees, organizers, and performers.</span>
+                  <span>
+                    Show respect and courtesy towards fellow attendees,
+                    organizers, and performers.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-500 mr-2">•</span>
-                  <span>Alcohol and drugs are strictly prohibited at the event.</span>
+                  <span>
+                    Alcohol and drugs are strictly prohibited at the event.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-500 mr-2">•</span>
-                  <span>Dispose of waste properly and help keep the venue clean.</span>
+                  <span>
+                    Dispose of waste properly and help keep the venue clean.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-500 mr-2">•</span>
@@ -118,7 +143,9 @@ function TicketContent({ qr1, qr2 }) {
           <span className="line bg-white h-10 w-[3px] mx-5"></span>
           <span className="num text-xs">Invitation</span>
         </div>
-        <div className="number absolute left-10 text-[150px] text-white/60 font-serif">1</div>
+        <div className="number absolute left-10 text-[150px] text-white/60 font-serif">
+          1
+        </div>
         <div className="invite absolute left-[150px] bottom-[45px] text-white w-1/5">
           <div className="h-[3px] w-10 bg-white mb-2"></div>
           <p className="text-sm font-medium">Invite for you</p>
@@ -147,7 +174,9 @@ function TicketContent({ qr1, qr2 }) {
             </section>
             <section>
               <div className="h-[3px] w-10 bg-[#8B5A2B] mb-2"></div>
-              <div className="title text-xs uppercase font-bold">Invite Number</div>
+              <div className="title text-xs uppercase font-bold">
+                Invite Number
+              </div>
               <div className="font-medium">XYXXZERO</div>
             </section>
           </div>
@@ -184,7 +213,8 @@ function TicketContent({ qr1, qr2 }) {
               rel="noopener noreferrer"
               className="text-black text-xs md:text-sm font-bold mt-2 flex items-center"
             >
-              #NONABESEC <span className="ml-1 md:ml-2 text-xs md:text-sm">↗</span>
+              #NONABESEC{" "}
+              <span className="ml-1 md:ml-2 text-xs md:text-sm">↗</span>
             </a>
           </div>
         </div>
@@ -208,7 +238,7 @@ function TicketContent({ qr1, qr2 }) {
         }
 
         .stub {
-          background: #8B5A2B; /* Brown color for sacred theme */
+          background: #8b5a2b; /* Brown color for sacred theme */
           height: 300px;
           width: 250px;
           color: white;
@@ -301,27 +331,27 @@ function TicketContent({ qr1, qr2 }) {
           .ticket {
             border-radius: 0;
           }
-          
+
           .check {
             height: 300px;
             padding: 40px;
           }
-          
+
           .big {
             font-size: 80px;
           }
-          
+
           .info {
             flex-direction: row;
             gap: 50px;
           }
-          
+
           .qr-box-contain {
             flex-direction: column;
             height: 300px;
             margin-top: 0;
           }
-          
+
           .qr-box {
             height: 150px;
             width: 150px;
@@ -334,31 +364,31 @@ function TicketContent({ qr1, qr2 }) {
             border-radius: 10px;
             overflow: hidden;
           }
-          
+
           .check {
             padding: 20px;
           }
-          
+
           .big {
             text-align: center;
             margin-bottom: 20px;
           }
-          
+
           .info {
             flex-direction: column;
             align-items: center;
             text-align: center;
           }
-          
+
           .info section {
             margin-bottom: 20px;
           }
-          
+
           .info section:before {
             margin-left: auto;
             margin-right: auto;
           }
-          
+
           .qr-box-contain {
             margin-top: 20px;
           }

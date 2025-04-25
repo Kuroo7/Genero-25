@@ -38,7 +38,7 @@ const Hero = ({ scrollYProgress }) => {
         onMouseMove={(e) => {
           manageMouseMove(e);
         }}
-        className={`${styles.container} sm:flex flex-col justify-center md:flex-row  `}
+        className={`${styles.container} sm:flex  flex-col justify-center md:flex-row  `}
       >
         <div ref={plane} className={"pt-48 md:pt-32 " + styles.body}>
           <Text3d primary={"GENERO'25"} secondary={"GENERO'25"} />

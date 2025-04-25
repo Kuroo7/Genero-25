@@ -223,7 +223,7 @@ export default function Schedule() {
                 backgroundColor: "#FFD700",
               }}
               whileTap={{ scale: 0.98 }}
-              className={`px-6 py-3 ${
+              className={`px-6 mt-6 py-3 ${
                 activeDay === `day${index + 1}` ? 'bg-yellow-500' : 'bg-yellow-400'
               } text-black font-semibold rounded-full transition-all duration-300 relative overflow-hidden`}
             >

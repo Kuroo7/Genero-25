@@ -456,6 +456,28 @@ export const eventsData = [
       description: "Coding, hackathons, and robotics competitions.",
       events: [
         {
+          id: "hackathon",
+          name: "24-Hour Hackathon",
+          description: "Code and build projects in 24 hours.",
+          imgSrc:"https://i.pinimg.com/736x/5f/d2/d0/5fd2d01856ad680ed6ccf72037ea50eb.jpg",
+          rules: ["Teams of 3-5 members.", "No pre-built projects allowed.", "Judging based on innovation."],
+        },
+        {
+          id: "robotics",
+          name: "Robotics Competition",
+          description: "Showcase your robotics skills.",
+          imgSrc:"https://i.pinimg.com/736x/25/d2/11/25d211e02245f53fe12cb76c17287f83.jpg",
+          rules: ["Robots must be autonomous.", "No external control allowed.", "Judges' decision is final."],
+        },
+      ],
+    },
+    {
+      id: "Business",
+      name: "Business Events",
+      imgSrc:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Coding, hackathons, and robotics competitions.",
+      events: [
+        {
           id: "Ad-Mad-Show",
           name: "Ad Mad Show",
           description: "Code and build projects in 24 hours.",
@@ -470,22 +492,8 @@ export const eventsData = [
           rules: ["Teams of 3-5 members.", "No pre-built projects allowed.", "Judging based on innovation."],
         },
         {
-          id: "Brand-Bttle",
-          name: "Brand Bttle",
-          description: "Code and build projects in 24 hours.",
-          imgSrc:"https://i.pinimg.com/736x/5f/d2/d0/5fd2d01856ad680ed6ccf72037ea50eb.jpg",
-          rules: ["Teams of 3-5 members.", "No pre-built projects allowed.", "Judging based on innovation."],
-        },
-        {
-          id: "Cric-Bid",
-          name: "Cric Bid",
-          description: "Code and build projects in 24 hours.",
-          imgSrc:"https://i.pinimg.com/736x/5f/d2/d0/5fd2d01856ad680ed6ccf72037ea50eb.jpg",
-          rules: ["Teams of 3-5 members.", "No pre-built projects allowed.", "Judging based on innovation."],
-        },
-        {
-          id: "Branding-on-Fabric",
-          name: "Branding on Fabric",
+          id: "Switch-Swap",
+          name: "Switch Swap",
           description: "Code and build projects in 24 hours.",
           imgSrc:"https://i.pinimg.com/736x/5f/d2/d0/5fd2d01856ad680ed6ccf72037ea50eb.jpg",
           rules: ["Teams of 3-5 members.", "No pre-built projects allowed.", "Judging based on innovation."],

@@ -93,7 +93,7 @@ export default function Navbar() {
                         >
                           <motion.a
                             whileHover={{ scale: 1.05 }}
-                            className={`group relative flex items-center px-4 py-2 rounded-lg transition duration-300 ${
+                            className={`group relative cursor-pointer flex items-center px-4 py-2 rounded-lg transition duration-300 ${
                               isGetTicket
                                 ? "bg-yellow-400 text-black shadow-lg shadow-yellow-500/50 hover:bg-yellow-300"
                                 : isActive

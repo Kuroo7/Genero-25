@@ -6,7 +6,7 @@ import React from "react";
 
 const EventsCard = ({ card, index, id }) => {
   return (
-    <Link href={`/events/${id}/${card.id}`}>
+    <Link href={""}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}

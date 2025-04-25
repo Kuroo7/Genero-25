@@ -14,9 +14,12 @@ const Scene = () => {
       gl={{ antialias: true }}
       dpr={[1, 1.5]}
       camera={{ position: [2, 0, 10], fov: 50 }} // Camera adjusted for closer view
+      onCreated={({ gl }) => {
+        gl.setClearColor("black"); // <-- Ensures WebGL background is black
+      }}
     >
       <EffectComposer>
-        <Fluid fluidColor="rgba(255, 200, 0, 0.6)" />
+        <Fluid fluidColor="rgba(255, 200, 0)" />
       </EffectComposer>
       <ambientLight intensity={1.5} />
       <Suspense fallback={null}>

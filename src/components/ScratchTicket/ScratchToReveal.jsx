@@ -4,7 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 function cn(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export const ScratchToReveal = ({
@@ -30,12 +30,12 @@ export const ScratchToReveal = ({
     if (canvas && ctx && !isComplete) {
       canvas.width = width;
       canvas.height = height;
-      
+
       const gradient = ctx.createLinearGradient(0, 0, width, height);
       gradient.addColorStop(0, gradientColors[0]);
       gradient.addColorStop(0.5, gradientColors[1]);
       gradient.addColorStop(1, gradientColors[2]);
-      
+
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
     }
@@ -45,7 +45,7 @@ export const ScratchToReveal = ({
   useEffect(() => {
     const handleMove = (x, y) => {
       if (isComplete) return;
-      
+
       const canvas = canvasRef.current;
       const ctx = canvas?.getContext("2d");
       if (!canvas || !ctx || !isScratching) return;
@@ -63,19 +63,19 @@ export const ScratchToReveal = ({
         handleMove(e.clientX, e.clientY);
       }
     };
-    
+
     const touchMove = (e) => {
       if (!isScratching) return;
-      
+
       const touch = e.touches[0];
       const dx = Math.abs(touch.clientX - startPos.current.x);
       const dy = Math.abs(touch.clientY - startPos.current.y);
-      
+
       if (dy > dx && dy > 10) {
         setIsScratching(false);
         return;
       }
-      
+
       e.preventDefault();
       handleMove(touch.clientX, touch.clientY);
     };
@@ -86,7 +86,8 @@ export const ScratchToReveal = ({
     };
 
     const mouseDown = (e) => {
-      if (e.button === 0) { // Only left mouse button
+      if (e.button === 0) {
+        // Only left mouse button
         startScratching(e.clientX, e.clientY);
         e.preventDefault();
       }
@@ -141,10 +142,12 @@ export const ScratchToReveal = ({
     const percentage = (transparentPixels / (width * height)) * 100;
     if (percentage >= minScratchPercentage) {
       setIsComplete(true);
-      controls.start({
-        scale: [1, 1.05, 1],
-        transition: { duration: 0.3 }
-      }).then(() => onComplete?.());
+      controls
+        .start({
+          scale: [1, 1.05, 1],
+          transition: { duration: 0.3 },
+        })
+        .then(() => onComplete?.());
     }
   };
 
