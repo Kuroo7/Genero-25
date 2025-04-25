@@ -19,7 +19,7 @@ export default function Page() {
     { name: "Appwars", logo: "/appwars.webp" },
     { name: "lensflix", logo: "/lensfilx.png" },
     { name: "grog", logo: "/grog1.jpeg" },
-    { name: "Ktm", logo: "/ktm.jpg" },
+    { name: "Ktm", logo: "/ktm.png" },
     { name: "Jodo", logo: "/jodo.jpg" },
     { name: "Bingo", logo: "/bingo.jpg" },
     { name: "Decathlon", logo: "/decathlon.png" },
