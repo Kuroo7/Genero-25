@@ -42,16 +42,16 @@
   align-items: flex-start; /* Align to top to prevent clipping */
   padding: 10px 0;
   box-sizing: border-box;
-  overflow-y: auto; /* Allow scrolling if needed, but should fit */
+  overflow-y: auto; /* Allow scrolling if needed */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .carousel-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, auto);
   gap: 10px;
-  width: 90%;
-  max-width: 360px; /* Slightly smaller to fit mobile screens */
+  width: 90vw; /* Scales with device width */
+  max-width: 400px; /* Slightly larger for larger mobile screens */
   margin: 0 auto;
 }
 
@@ -61,9 +61,16 @@
   overflow: hidden;
   background-color: #2a1a3a; /* Dark purple tint */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 0 6px rgba(255, 215, 0, 0.2);
-  padding: 8px;
-  border: 1px solid #FFD700; /* Gold border */
+  
+ 
+  opacity: 0;
+  transform: translateY(50px);
+  will-change: opacity, transform;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item.animate-in {
+  animation: crazySlideBounce 0.4s ease-out forwards;
 }
 
 .carousel-item:hover {
@@ -73,34 +80,37 @@
 
 .carousel-image {
   width: 100%;
-  height: 70px; /* Reduced to fit all rows */
+  height: 20vh; /* Scales with viewport height */
+  min-height: 120px; /* Minimum for smaller screens */
+  max-height: 200px; /* Maximum for larger mobile screens */
   object-fit: contain; /* Full image visibility */
   display: block;
   border-radius: 4px;
 }
 
-.image-overlay {
-  position: absolute;
-  bottom: 8px;
-  left: 8px;
-  right: 8px;
-  background: linear-gradient(to top, rgba(75, 0, 130, 0.7), transparent);
-  color: #FFFFF0;
-  padding: 6px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 
-.carousel-item:hover .image-overlay {
-  opacity: 1;
-}
+
 
 .event-number {
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.8rem; /* Slightly larger for larger cards */
   font-weight: 500;
   text-shadow: 0 0 4px rgba(255, 215, 0, 0.3);
+}
+
+@keyframes crazySlideBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translateY(0) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @media (min-width: 768px) {

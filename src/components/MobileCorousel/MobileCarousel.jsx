@@ -1,4 +1,5 @@
 import "./MobileCarousel.css";
+import { useEffect, useRef } from "react";
 
 const images = [
   "/PastEvents/1.webp",
@@ -12,6 +13,27 @@ const images = [
 ];
 
 const MobileCarousel = () => {
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const items = gridRef.current.querySelectorAll(".carousel-item");
+    items.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div id="mobileEventView" className="mobile-only-view">
       <div className="bg-container">
@@ -24,23 +46,25 @@ const MobileCarousel = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-          Past Events
+            Past Events
           </h1>
         </div>
       </div>
 
       <div className="carousel-container">
-        <div className="carousel-grid">
+        <div className="carousel-grid" ref={gridRef}>
           {images.map((img, index) => (
-            <div className="carousel-item" key={`img-${index}`}>
+            <div
+              className="carousel-item"
+              key={`img-${index}`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <img
                 src={img}
                 alt={`Past Event ${index + 1}`}
                 className="carousel-image"
+                loading="lazy"
               />
-              <div className="image-overlay">
-                <span className="event-number">Event {index + 1}</span>
-              </div>
             </div>
           ))}
         </div>
