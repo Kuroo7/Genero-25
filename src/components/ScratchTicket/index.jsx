@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import qr1 from "../../../public/Registration/qr-abes.png";
-import qr2 from "../../../public/Registration/qr-nonabes.png";
+import qr1 from "../../../public/Registration/qr-abes.jpeg";
+import qr2 from "../../../public/Registration/qr-nonabes.jpeg";
 import { ScratchToReveal } from "./ScratchToReveal";
 
 export default function TicketSection() {
@@ -151,8 +151,8 @@ function TicketContent({ qr1, qr2 }) {
           <p className="text-sm font-medium">Invite for you</p>
         </div>
         {/* Triangles for stub edges */}
-        <div className="absolute top-0 right-0 border-t-[20px] border-t-[#5D3A1A] border-l-[20px] border-l-[#8B5A2B]"></div>
-        <div className="absolute bottom-0 right-0 border-b-[20px] border-b-[#5D3A1A] border-l-[20px] border-l-[#8B5A2B]"></div>
+        <div className="absolute top-0 right-0 border-t-[20px] border-t-[#d49f00] border-l-[20px] border-l-[#FFCA28]"></div>
+        <div className="absolute bottom-0 right-0 border-b-[20px] border-b-[#d49f00] border-l-[20px] border-l-[#FFCA28]"></div>
       </div>
 
       {/* Main Ticket Section */}
@@ -191,7 +191,7 @@ function TicketContent({ qr1, qr2 }) {
               className="w-[100px] h-[100px] md:w-[100px] md:h-[100px]"
             />
             <a
-              href="https://rzp.io/l/OLuKyJ3"
+              href="https://pay.jodo.in/pages/PXnFu2ixjMaTGTuB"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black text-xs md:text-sm font-bold mt-2 flex items-center"
@@ -208,7 +208,7 @@ function TicketContent({ qr1, qr2 }) {
               className="w-[100px] h-[100px] md:w-[100px] md:h-[100px]"
             />
             <a
-              href="https://rzp.io/l/9ELBp2Vi1"
+              href="https://pay.jodo.in/pages/327WhYZtuzfgiSrY"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black text-xs md:text-sm font-bold mt-2 flex items-center"
@@ -219,8 +219,8 @@ function TicketContent({ qr1, qr2 }) {
           </div>
         </div>
         {/* Triangles for check edges */}
-        <div className="absolute top-0 left-0 border-t-[20px] border-t-[#5D3A1A] border-r-[20px] border-r-white"></div>
-        <div className="absolute bottom-0 left-0 border-b-[20px] border-b-[#5D3A1A] border-r-[20px] border-r-white"></div>
+        <div className="absolute top-0 left-0 border-t-[20px] border-t-[#d49f00] border-r-[20px] border-r-white"></div>
+        <div className="absolute bottom-0 left-0 border-b-[20px] border-b-[#d49f00] border-r-[20px] border-r-white"></div>
       </div>
 
       {/* Global styles including mobile-specific adjustments */}
@@ -238,7 +238,7 @@ function TicketContent({ qr1, qr2 }) {
         }
 
         .stub {
-          background: #8b5a2b; /* Brown color for sacred theme */
+          background: #FFCA28; /* Brown color for sacred theme*/
           height: 300px;
           width: 250px;
           color: white;
@@ -267,7 +267,7 @@ function TicketContent({ qr1, qr2 }) {
           position: absolute;
           left: 40px;
           font-size: 150px;
-          color: rgba(255, 255, 255, 0.3);
+          color: rgb(255, 255, 255);
           font-family: serif;
           z-index: 1;
         }
