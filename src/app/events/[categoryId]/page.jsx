@@ -19,12 +19,12 @@ export default function EventCategoryPage() {
   return (
     <div
       className="min-h-screen flex flex-col items-center py-10 px-4 pt-20"
-      style={{backgroundImage: "url('/event.jpg')", backgroundSize: "cover" }}
+      style={{ backgroundImage: "url('/event.jpg')", backgroundSize: "cover" }}
     >
       <h1
         style={{
           textAlign: "center",
-          marginTop: "30px",
+          marginTop: "10px",
           fontFamily: "MedievalSharp",
           background: "linear-gradient(90deg, white 0%,rgb(255, 191, 0) 100%)",
           WebkitBackgroundClip: "text",
@@ -35,9 +35,15 @@ export default function EventCategoryPage() {
       >
         {category.name}
       </h1>
-      <div 
+      <div
         className="flex w-full max-w-6xl mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6"
-        style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         {category.events.map((card, index) => (
           <EventsCard
             key={card.id}
