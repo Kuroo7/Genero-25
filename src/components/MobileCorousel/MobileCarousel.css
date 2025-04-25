@@ -17,7 +17,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #4B0082, #1a1a1a); /* Deep purple to dark */
 }
 
 .header-container {
@@ -58,9 +57,8 @@
 .carousel-item {
   position: relative;
   border-radius: 6px;
-  overflow: hidden;
-  background-color: #2a1a3a; /* Dark purple tint */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 0 6px rgba(255, 215, 0, 0.2);
+  overflow: hidden; /* Dark purple tint */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 0 6px rgba(255, 215, 0, 0.2); */
   
  
   opacity: 0;

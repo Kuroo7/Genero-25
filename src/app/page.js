@@ -47,7 +47,7 @@ export default function Home() {
       <PastEvents />
       <MobileCarousel/>      
       <TextMask />
-      <CountDown/>
+      {/* <CountDown/> */}
       <Faq />
       <ScratchTicket/>
       {/* <Ticket /> */}
