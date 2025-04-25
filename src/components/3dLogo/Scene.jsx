@@ -19,7 +19,7 @@ const Scene = () => {
       }}
     >
       <EffectComposer>
-        <Fluid fluidColor="rgba(255, 200, 0)" />
+        <Fluid fluidColor="rgb(255, 200, 0)" />
       </EffectComposer>
       <ambientLight intensity={1.5} />
       <Suspense fallback={null}>
