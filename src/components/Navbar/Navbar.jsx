@@ -25,7 +25,7 @@ const navItems = [
   { name: "EVENTS", href: "/events", icon: CalendarDays },
   { name: "FAQ", href: "/#faq", icon: HelpCircle },
   { name: "SCHEDULE", href: "/schedule", icon: Clock },
-  { name: "TEAM", href: "/team", icon: Users },
+  // { name: "TEAM", href: "/team", icon: Users },
   { name: "SPONSORS", href: "/sponsors", icon: Users },
 
   { name: "GET TICKET", href: "/#ticket", icon: Ticket },
