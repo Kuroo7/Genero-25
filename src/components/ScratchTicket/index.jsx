@@ -163,17 +163,17 @@ function TicketContent({ qr1, qr2 }) {
           </div>
           <div className="info flex flex-col md:flex-row gap-4 md:gap-10 text-black">
             <section>
-              <div className="h-[3px] w-10 bg-[#8B5A2B] mb-2"></div>
+              <div className="h-[3px] w-10 bg-[#d49f00] mb-2"></div>
               <div className="title text-xs uppercase font-bold">Date</div>
               <div className="font-medium">DD/MM/YYYY</div>
             </section>
             <section>
-              <div className="h-[3px] w-10 bg-[#8B5A2B] mb-2"></div>
+              <div className="h-[3px] w-10 bg-[#d49f00] mb-2"></div>
               <div className="title text-xs uppercase font-bold">Issued By</div>
               <div className="font-medium">SACRED LEGACY</div>
             </section>
             <section>
-              <div className="h-[3px] w-10 bg-[#8B5A2B] mb-2"></div>
+              <div className="h-[3px] w-10 bg-[#d49f00] mb-2"></div>
               <div className="title text-xs uppercase font-bold">
                 Invite Number
               </div>
