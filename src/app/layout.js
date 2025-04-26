@@ -6,7 +6,6 @@ import Footer from "@/components/Footer/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import Sidebar from "@/components/SideBar/page";
 import BuyTicketButton from "@/components/BuyTicketButton/BuyTicketButton";
-import Loader from "@/components/Loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

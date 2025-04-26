@@ -84,6 +84,7 @@ export default function Navbar() {
 
                       return (
                         <Link
+                        className="cursor-pointer"
                           key={item.name}
                           href={item.href}
                           scroll={true}
@@ -91,7 +92,7 @@ export default function Navbar() {
                         >
                           <motion.a
                             whileHover={{ scale: 1.05 }}
-                            className={`group relative flex items-center px-4 py-2 rounded-lg transition duration-300 ${
+                            className={`group relative flex items-center px-4 py-2 rounded-lg cursor-pointer transition duration-300 ${
                               isGetTicket
                                 ? "bg-yellow-400 text-black shadow-lg shadow-yellow-500/50 hover:bg-yellow-300"
                                 : isActive

@@ -170,7 +170,7 @@ function TicketContent({ qr1, qr2 }) {
             <section>
               <div className="h-[3px] w-10 bg-[#d49f00] mb-2"></div>
               <div className="title text-xs uppercase font-bold">Issued By</div>
-              <div className="font-medium">SACRED LEGACY</div>
+              <div className="font-medium">Genero'25 </div>
             </section>
             <section>
               <div className="h-[3px] w-10 bg-[#d49f00] mb-2"></div>

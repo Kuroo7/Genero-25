@@ -183,19 +183,19 @@ const Footer = () => {
               <p>
                 Mail:{" "}
                 <a
-                  href="mailto:abc@gmail.com"
+                  href="mailto:abesec.genero@gmail.com"
                   className="hover:text-neon-cyan transition-colors duration-300"
                 >
-                  abc@gmail.com
+                  abesec.genero@gmail.com
                 </a>
               </p>
               <p>
-                Bhaskar{" "}
+                Naman Goel{" "}
                 <a
-                  href="tel:+91888888888"
+                  href="tel:+9711444714"
                   className="hover:text-neon-cyan transition-colors duration-300"
                 >
-                  +91 88888 88888
+                  +919711444714
                 </a>
               </p>
             </div>
@@ -242,7 +242,7 @@ const Footer = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            © {year} ABES Engineering College Annual Fest. All rights reserved.
+            © {year} ABES Group. All rights reserved.
           </motion.p>
         </div>
 

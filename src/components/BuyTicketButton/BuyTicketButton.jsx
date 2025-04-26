@@ -2,12 +2,13 @@
 import { useRef, useState } from "react";
 import { LuTicket } from "react-icons/lu";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const BuyTicketButton = () => {
   return (
-    <div className="grid fixed bottom-0 right-0 z-50 min-h-[200px] place-content-center p-4">
+    <Link href="/#ticket"  className="grid fixed bottom-0 right-0 z-50 min-h-[200px] place-content-center p-4">
       <EncryptButton />
-    </div>
+    </Link>
   );
 };
 
