@@ -137,7 +137,7 @@ function TicketContent({ qr1, qr2 }) {
     <div className="ticket flex flex-col md:flex-row bg-white shadow-lg">
       {/* Stub Section - Hidden on mobile */}
       <div className="stub hidden md:block bg-[#8B5A2B] w-[250px] h-[300px] p-5 relative text-white">
-        <div className="absolute inset-0 bg-[url('/sacred-pattern.png')] opacity-10" />
+        <div className="absolute inset-0 opacity-10" />
         <div className="top flex items-center h-10 uppercase">
           <span className="admit font-medium">Admit</span>
           <span className="line bg-white h-10 w-[3px] mx-5"></span>
