@@ -21,7 +21,7 @@ const EventsCard = ({ card, index, id }) => {
           width: "250px",
           height: "400px",
           filter: "drop-shadow(0 0 10px #ffb30058)",
-          backgroundImage: 'url("/innerCard.jpg")',
+          backgroundImage: 'url("/innerCard.png")',
           // backgroundColor: "#000000",
           backgroundSize: "cover",
           backgroundPosition: "center",
