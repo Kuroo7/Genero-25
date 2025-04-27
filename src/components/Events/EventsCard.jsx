@@ -5,8 +5,10 @@ import Link from "next/link";
 import React from "react";
 
 const EventsCard = ({ card, index, id }) => {
+  console.log(card,id);
+  
   return (
-    <Link href={""}>
+    <Link href={`${id}/${card.id}`}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
