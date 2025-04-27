@@ -5,7 +5,6 @@ import Link from "next/link";
 import React from "react";
 
 const EventsCard = ({ card, index, id }) => {
-  console.log(card,id);
   
   return (
     <Link href={`${id}/${card.id}`}>
