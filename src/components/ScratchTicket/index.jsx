@@ -16,7 +16,7 @@ export default function TicketSection() {
     >
       {/* Background Elements */}
       <div className="fixed inset-0 -z-10 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/sacred-pattern.png')] bg-repeat opacity-30" />
+        <div className="absolute top-0 left-0 w-full h-full bg-repeat opacity-30" />
         <div className="absolute top-1/2 left-1/2 w-[120%] h-[120%] bg-radial-gradient(from-center, #2c1b0f00 0%, #0a0a0a 70%)" />
       </div>
 
@@ -46,7 +46,7 @@ export default function TicketSection() {
 
         {!isScratched && section === 0 && (
           <div className="hidden md:block text-center mb-8">
-            <p className="text-amber-400 italic text-lg font-serif animate-pulse">
+            <p className="text-amber-400 italic  text-3xl font-serif animate-pulse">
               Scratch to reveal your sacred ticket
             </p>
           </div>

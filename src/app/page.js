@@ -12,6 +12,8 @@ import ZoomParallax from "@/components/ZoomParallax/page";
 import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
+import PastGenero from "@/components/PastGenero";
+import Break from "@/components/Break";
 //import MobileCorousel from "@/components/mobileCorousel/page";
 
 export default function Home() {
@@ -43,7 +45,9 @@ export default function Home() {
       </div>  
       {/* <Break/> */}
       <ZoomParallax />
-      <PastEvents />
+      {/* <PastEvents /> */}
+      {/* <PastGenero/> */}
+      <Break/>
       <MobileCarousel/>      
       <TextMask />
       {/* <CountDown/> */}
